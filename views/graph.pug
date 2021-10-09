@@ -1,0 +1,93 @@
+include mixins/_header.pug
+include mixins/_symbols.pug
+include mixins/_svg_effects.pug
+include mixins/_diagram2.pug
+include mixins/_diagram3.pug
+include mixins/_diagram4.pug
+include mixins/_diagram5.pug
+doctype html
+html
+  head
+    link(rel="shortcut icon" href="./../images/favicon.ico" type="image/x-icon")
+    link(rel="icon" href="./../images/favicon.ico" type="image/x-icon")
+
+    link(href="https://fonts.googleapis.com/css?family=Poppins:400,600,700,800&display=swap" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+    link(type="text/css" rel="stylesheet" href="./../css/materialize.min.css"  media="screen,projection")
+    link(type="text/css" rel="stylesheet" href="./../css/main.css")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+  
+    title Venn Diagram Generator
+
+  body
+    .receptor
+      #float
+    +top(1)
+    main
+      .fixed-action-btn
+        a#imporSVG.btn-floating.btn-large.waves-effect.waves-light.red
+          i.material-icons file_download
+      .row
+        form.col.s12.l4
+          h1 Graficador
+          .row
+            .input-field.col.s12
+              input#expression(type="text")
+              label(for="expression") Ingresa la operación
+            .input-field.col.s12
+              select#n-sets(onchange="buildElements()")
+                option(value="auto" selected) Selecciona un valor
+                option(value="2") 2 Conjuntos
+                option(value="3") 3 Conjuntos
+                option(value="4") 4 Conjuntos
+                option(value="5") 5 Conjuntos
+              label Número de conjuntos
+            .input-field.col.s12.elements
+              p
+                label
+                  input#useEl(type="checkbox" onclick="toggleElements()")
+                  span Elementos
+              #elements.down
+            .input-field.col.s12
+              button.waves-effect.waves-light.btn.eval(onclick="eval()", type="button")
+                i.material-icons.left forward
+                | Evaluar
+          .divider
+          .row
+            .col.s12
+              p Puedes consultar la tabla de símbolos disponibles aquí:
+              button.waves-effect.waves-light.btn-flat.modal-trigger(onclick="", type="button", data-target="symbols")
+                i.material-icons.left note
+                | Símbolos disponibles
+              #symbols.modal
+                +symbols()
+        .col.s12.l8          
+          .row
+            #logo.col.s12
+              p
+                img(src="./../images/logo.png" alt="Logo chido")
+            #diagram.col.s12
+              +effects()
+              #sets2.hide.center
+                +diagram2()
+              #sets3.hide.center
+                +diagram3()
+              #sets4.hide.center
+                +diagram4()
+              #sets5.hide.center
+                +diagram5()
+            .col.s12
+              .row
+                #elements-result.col.s12.center-align
+        .col.s12
+          canvas#canvas
+          
+
+
+  script(type="text/javascript" src="./../js/jquery-3.4.1.min.js")
+  script(type="text/javascript" src="./../js/materialize.min.js")
+  script(type="text/javascript" src="./../js/init.js")
+  script(type="text/javascript" src="./../js/graphing.js")
+  script(type="text/javascript" src="./../js/elements.js")
+  script(type="text/javascript" src="./../js/vdg.js")
+  

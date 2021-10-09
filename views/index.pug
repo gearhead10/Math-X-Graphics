@@ -1,0 +1,52 @@
+include mixins/_header.pug
+doctype html
+html
+  head
+    link(rel="shortcut icon" href="./../images/favicon.ico" type="image/x-icon")
+    link(rel="icon" href="./../images/favicon.ico" type="image/x-icon")
+
+    link(href="https://fonts.googleapis.com/css?family=Poppins:400,600,700,800&display=swap" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+    link(type="text/css" rel="stylesheet" href="./../css/materialize.min.css"  media="screen,projection")
+    link(type="text/css" rel="stylesheet" href="./../css/main.css")
+    //- link(type="text/css" rel="stylesheet" href="./../css/particles.css")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+  
+    title Venn Diagram Generator
+  body#index
+    +top(0)
+    .up
+      #particles-js
+    main
+      .row
+        form.col.s12.center-align
+          h1 Bienvenido
+        .col.s12.center-align
+          h2 A Venn Diagram Generator
+          p 
+            | Esta aplicación web te permite graficar de forma cómoda y fácil
+            | diagramas de Venn.
+      .row
+        .col.s12.m4.promo.center-align
+          i.material-icons flash_on
+          h2 Poderoso y simple
+          p ¡Grafica expresiones hasta con 5 conjuntos!
+        .col.s12.m4.promo.center-align
+          i.material-icons beach_access
+          h2 Intuitivo
+          p Interfaz ergonómica
+        .col.s12.m4.promo.center-align
+          i.material-icons phonelink
+          h2 Responsivo
+          p
+            | Construído con <b>Materialize CSS</b>, 
+            | la interfaz se adapta a cualquier dispositivo,
+            |  cualquier pantalla
+        
+
+  script(type="text/javascript" src="./../js/jquery-3.4.1.min.js")
+  script(type="text/javascript" src="./../js/materialize.min.js")
+  script(type="text/javascript" src="./../js/particles.min.js")
+  script(type="text/javascript" src="./../js/particles.js")
+  script(type="text/javascript" src="./../js/init.js")
+  script(type="text/javascript" src="./../js/index.js")

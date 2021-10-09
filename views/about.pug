@@ -1,0 +1,27 @@
+include mixins/_header.pug
+doctype html
+html
+  head
+    link(rel="shortcut icon" href="./../images/favicon.ico" type="image/x-icon")
+    link(rel="icon" href="./../images/favicon.ico" type="image/x-icon")
+
+    link(href="https://fonts.googleapis.com/css?family=Poppins:400,600,700,800&display=swap" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+    link(type="text/css" rel="stylesheet" href="./../css/materialize.min.css"  media="screen,projection")
+    link(type="text/css" rel="stylesheet" href="./../css/main.css")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+  
+    title Venn Diagram Generator
+  body
+    +top(2)
+    main
+      .row
+        form.col.s12.l4
+          h1 Sobre nosotros
+          p
+            | Síguenos en 
+            a(href="https://github.com/JoelHernandez343/ing-de-sfw-project" target="_blank") GitHub
+  script(type="text/javascript" src="./../js/jquery-3.4.1.min.js")
+  script(type="text/javascript" src="./../js/materialize.min.js")
+  script(type="text/javascript" src="./../js/init.js")
+  script(type="text/javascript" src="./../js/about.js")

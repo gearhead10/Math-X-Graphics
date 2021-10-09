@@ -1,0 +1,21 @@
+mixin top(selected)
+  header.header
+    - var array = [['Inicio', 'index.html'], ['Graficador', './graph.html'],['Sobre nosotros', './about.html']]
+    .row
+      .col.s12.l5
+        h1 Venn Diagram Generator
+        h2 Operaciones complejas, diagramas sencillos
+      .col.l7.hide-on-med-and-down.naving
+        .row
+          - for (var i = 0; i < 3; ++i)
+            .col.s4
+              div(class=`${i === selected ? 'top-selected' : ''}`)
+                a.waves-effect.btn-flat(class=`${i === selected ? 'disabled' : ''}` href=`${array[i][1]}`)=`${array[i][0]}`
+    .container
+      a.top.sidenav-trigger.full.hide-on-large-only(href="#" data-target="mobile-demo")
+        i.material-icons menu
+    ul#mobile-demo.sidenav
+      h1 Navegación
+      - for (var i = 0; i < 3; ++i)
+        li
+          a.waves-effect(href=`${array[i][1]}` class=`${i === selected ? 'disabled top-selected' : ''}`)=`${array[i][0]}`
