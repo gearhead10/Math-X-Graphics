@@ -1,3 +1,10 @@
 Prueba LOG v0.5 alpha
 
 ----------------------
+
+-- v0.7 --
+
+** Minor bugs fixed
+** Cambios en el main de CSS y CSS3
+** Cambios en H1, H2, modal input y select
+** Cambio en paletas de colores a RGBA 
