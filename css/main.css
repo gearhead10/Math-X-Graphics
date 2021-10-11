@@ -216,6 +216,7 @@ button.eval i {
 
 #diagram {
   position: relative;
+  
 }
 
 #diagram .center {
@@ -397,3 +398,15 @@ button.eval i {
 #canvas {
   display: none;
 }
+/*
+.box {
+  display: flex;
+  /*align-items: center;
+  justify-content: center;
+}
+
+.box div {
+  width: 150px;
+  height: 150px;
+}
+*/
