@@ -18,6 +18,8 @@ let buildElements = () => {
     div = D.create('div');
     div.className = 'input-field col s12';
 
+
+    
     var input = D.create('input');
     input.setAttribute('id', `sett${letter}`);
     input.setAttribute('type', 'text');
