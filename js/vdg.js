@@ -2,21 +2,22 @@
 let userSets = () => {
   var s = D.getId('n-sets');
   var n = s.options[s.selectedIndex].value;
-  return n === 'auto' ? 3 : Number.parseInt(n);
+  return n === 'auto' ? 0 : Number.parseInt(n);
 }
+
 
 let buildElements = () => {
   var n = userSets();
-
+  
   var row = D.create('div');
   row.className = 'row';
-
-  for (var i = 0; i < n; ++i){
+  
+  for (var i = 0; i < n; ++i) {
     var letter = String.fromCharCode(65 + i);
 
     div = D.create('div');
     div.className = 'input-field col s12';
-    
+
     var input = D.create('input');
     input.setAttribute('id', `sett${letter}`);
     input.setAttribute('type', 'text');
@@ -34,16 +35,16 @@ let buildElements = () => {
 
   while (e.firstChild)
     e.removeChild(e.firstChild);
-  
+
   e.appendChild(row);
-  
+
 }
 
 let toggleElements = () => {
   var v = D.getId("useEl").checked;
   var e = D.getId("elements");
 
-  if (v){
+  if (v) {
     e.classList.add('upp');
     buildElements();
   }
@@ -54,10 +55,10 @@ let toggleElements = () => {
 let sets = [];
 
 let nameSets = [
-  ['A-B','B-A','A^B','S'],
-  ['A-B-C','B-A-C','C-B-A','A^B-C','B^C-A','A^C-B','A^B^C','S'],
-  ['A-B-C-D','B-A-C-D','C-A-B-D','D-A-B-C','A^B-C-D','A^C-B-D','A^D-B-C','B^C-A-D','B^D-A-C','C^D-A-B','A^B^C-D','A^B^D-C','A^C^D-B','B^C^D-A','A^B^C^D','S'],
-  ['A-B-C-D-E','B-A-C-D-E','C-A-B-D-E','D-A-B-C-E','E-A-B-C-D','A^B-C-D-E', 'A^C-B-D-E', 'A^D-B-C-E', 'A^E-B-C-D', 'B^C-A-D-E', 'B^D-A-C-E', 'B^E-A-C-D', 'C^D-A-B-E', 'C^E-A-B-D', 'D^E-A-B-C', 'A^B^C-D-E', 'A^B^D-C-E', 'A^B^E-C-D', 'A^C^D-B-E', 'A^C^E-B-D', 'A^D^E-B-C', 'B^C^D-A-E', 'B^C^E-A-D', 'B^D^E-A-C', 'C^D^E-B-A', 'A^B^C^D-E', 'A^B^C^E-D', 'A^B^D^E-C', 'A^C^D^E-B', 'B^C^D^E-A', 'A^B^C^D^E', 'S']
+  ['A-B', 'B-A', 'A^B', 'S'],
+  ['A-B-C', 'B-A-C', 'C-B-A', 'A^B-C', 'B^C-A', 'A^C-B', 'A^B^C', 'S'],
+  ['A-B-C-D', 'B-A-C-D', 'C-A-B-D', 'D-A-B-C', 'A^B-C-D', 'A^C-B-D', 'A^D-B-C', 'B^C-A-D', 'B^D-A-C', 'C^D-A-B', 'A^B^C-D', 'A^B^D-C', 'A^C^D-B', 'B^C^D-A', 'A^B^C^D', 'S'],
+  ['A-B-C-D-E', 'B-A-C-D-E', 'C-A-B-D-E', 'D-A-B-C-E', 'E-A-B-C-D', 'A^B-C-D-E', 'A^C-B-D-E', 'A^D-B-C-E', 'A^E-B-C-D', 'B^C-A-D-E', 'B^D-A-C-E', 'B^E-A-C-D', 'C^D-A-B-E', 'C^E-A-B-D', 'D^E-A-B-C', 'A^B^C-D-E', 'A^B^D-C-E', 'A^B^E-C-D', 'A^C^D-B-E', 'A^C^E-B-D', 'A^D^E-B-C', 'B^C^D-A-E', 'B^C^E-A-D', 'B^D^E-A-C', 'C^D^E-B-A', 'A^B^C^D-E', 'A^B^C^E-D', 'A^B^D^E-C', 'A^C^D^E-B', 'B^C^D^E-A', 'A^B^C^D^E', 'S']
 ];
 
 let currentDigram = '';
@@ -67,25 +68,24 @@ let eval = () => {
   x = prepros(x);
 
   var n = userSets();
-  if (x){
+  if (x) {
     D.getId('logo').classList.add('hide');
 
     var p = toPost(x);
     var e = evaluate(p, n);
 
-    console.log(e);
-
-    for (var i = 2; i < 6; ++i){
+    for (var i = 2; i < 6; ++i) {
       var tmp = `sets${i}`;
-      if (i === n){
+      if (i === n) {
         D.getId(tmp).classList.remove('hide');
         currentDigram = tmp;
       }
-      else{
-        D.getId(tmp).classList.add('hide');}
+      else {
+        D.getId(tmp).classList.add('hide');
+      }
     }
 
-    for (var i = 0; i < e.length; ++i){
+    for (var i = 0; i < e.length; ++i) {
       var tmp = `f${n}_${i + 1}`;
 
       if (e[i])
@@ -106,7 +106,7 @@ let eval = () => {
       console.log(sets);
 
       var data = 'Conjunto resultante: ';
-      for (var i = 0; i < e.length; ++i){
+      for (var i = 0; i < e.length; ++i) {
         if (e[i])
           data += sets[i] == '' ? '' : `${sets[i]},`;
       }
@@ -122,9 +122,9 @@ let recalculate = (x, y) => {
   var float = D.getId('float');
 
   var win = window.innerHeight + window.pageYOffset;
-  
+
   var left = x - 280 < 15 ? 15 : x - 280;
-  var top = y + 30 >  win - 130 ? y - 130 : y + 30;
+  var top = y + 30 > win - 130 ? y - 130 : y + 30;
 
   float.style.left = `${left}px`;
   float.style.top = `${top}px`;
@@ -132,7 +132,7 @@ let recalculate = (x, y) => {
 
 let floatState;
 
-let floatClick = function(e){
+let floatClick = function (e) {
   var float = D.getId('float');
 
   if (!float.classList.contains('show') || this !== floatState)
@@ -155,7 +155,7 @@ let floatClick = function(e){
   data += '</p></div></div>';
 
   content.innerHTML = data;
-  
+
   while (float.firstChild)
     float.removeChild(float.firstChild);
 
@@ -171,7 +171,7 @@ const outsideClick = e => {
     float.classList.remove('show');
 }
 
-function triggerDownload (imgURI) {
+function triggerDownload(imgURI) {
   var evt = new MouseEvent('click', {
     view: window,
     bubbles: false,
@@ -189,7 +189,7 @@ function triggerDownload (imgURI) {
 let importImage = e => {
 
   if (currentDigram == '') return;
-  
+
   var svg = document.getElementById(currentDigram).querySelector('svg');
   var canvas = document.getElementById('canvas');
 
@@ -203,7 +203,7 @@ let importImage = e => {
   var DOMURL = window.URL || window.webkitURL || window;
 
   var img = new Image();
-  var svgBlob = new Blob([data], {type: 'image/svg+xml;charset=utf-8'});
+  var svgBlob = new Blob([data], { type: 'image/svg+xml;charset=utf-8' });
   var url = DOMURL.createObjectURL(svgBlob);
 
   img.onload = function () {
@@ -211,8 +211,8 @@ let importImage = e => {
     DOMURL.revokeObjectURL(url);
 
     var imgURI = canvas
-        .toDataURL('image/png')
-        .replace('image/png', 'image/octet-stream');
+      .toDataURL('image/png')
+      .replace('image/png', 'image/octet-stream');
 
     triggerDownload(imgURI);
   };
