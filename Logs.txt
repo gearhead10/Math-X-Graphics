@@ -8,3 +8,9 @@ Prueba LOG v0.5 alpha
 ** Cambios en el main de CSS y CSS3
 ** Cambios en H1, H2, modal input y select
 ** Cambio en paletas de colores a RGBA 
+
+-- v0.8 --
+
+** Cambios menores en el archivo CSS.
+** Añadida una pequeña lista de operaciones dentro del div.
+** Bug de divs hallados.
