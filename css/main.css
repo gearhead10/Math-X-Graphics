@@ -1,24 +1,9 @@
 * {
   font-family: 'Poppins', sans-serif;
-  color: #11A67B;
+  color: #53ffce;
   font-weight: bold;
 }
-/*.preloader {
-  width: 70px;
-  height: 70px;
-  border: 10px solid #eee;
-  border-top: 10px solid #666;
-  border-radius: 50%;
-  animation-name: girar;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-}*/
+
 *,*:after, *before{
   margin: 0;
   padding: 0;
@@ -28,7 +13,7 @@
 } 
 
 #contenedor_carga{
-  background-color: rgba(250,240,245,0.9);
+  background-color: rgba(0, 255, 213, 0.9);
   height: 100%;
   width: 100;
   position: center;
@@ -38,8 +23,8 @@
   z-index: 10000;
 }
 #carga{
-  border: 15px solid #ccc;
-  border-top-color: #F4266A;
+  border: 15px solid rgb(162, 0, 255);
+  border-top-color: #00b7ff;
   border-top-style: groove;
   height: 100px;
   width: 100px;
@@ -71,7 +56,7 @@
 }
 
 body {
-  background-color: #D3FFF8;
+  background-color: #000000;
 }
 
 header.header .row {
@@ -118,7 +103,7 @@ header.header h1, .modal h1{
   font-size: 2.1em;
   font-weight: 700;
   margin-bottom: 0;
-  background: linear-gradient(45deg,#0BE0D5,#000000);
+  background: linear-gradient(45deg,#ffffff,#00ffdd);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -128,6 +113,7 @@ header.header h1, .modal h1{
 }
 
 header.header h2 {
+  color: #53ffce;
   font-size: 1.2em;
   font-weight: 700;
   margin: 0.2em 0 0 0;
@@ -155,11 +141,11 @@ a.sidenav-trigger.top {
 }
 
 .input-field input[type=text]:focus + label {
-  color: #0095AB !important;
+  color: #00ffff !important;
 }
 
 .input-field input[type=text]:focus {
-  border-bottom: 1px solid #0095AB !important;
+  border-bottom: 1px solid #ff00dd !important;
   box-shadow: 0 1px 0 0 #0095AB !important;
 }
 
@@ -189,7 +175,7 @@ main .elements p{
   max-height: 0;
   transition: max-height 0.15s ease-out, box-shadow 0.15s ease-out;
   overflow: hidden;
-  background: #9DFFF8;
+  background: #1b0b20;
   box-shadow: none;
 }
 
@@ -200,7 +186,7 @@ main .elements p{
 }
 
 button.eval {
-  background: linear-gradient(45deg,#0BE0D5,#e52e71);
+  background: linear-gradient(45deg,#02fff2,#e52e71);
 }
 
 button.eval i {
@@ -237,7 +223,7 @@ button.eval i {
 }
 
 .fixed-action-btn a {
-  background: linear-gradient(45deg,#ff8a00,#e52e71);
+  background: linear-gradient(45deg,#00ff0d,#e52e71);
 }
 
 .dg {
@@ -342,7 +328,8 @@ button.eval i {
 #float.show {
   top: 50px;
   height: 100px;
-  box-shadow: 0 8px 17px 2px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 17px 2px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12),
+   0 5px 5px -3px rgba(0,0,0,0.2);
   border-radius: 3px;
   transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
@@ -394,7 +381,7 @@ button.eval i {
 
 .promo i {
   font-size: 4em;
-  background: linear-gradient(45deg,#ff8a00,#e52e71);
+  background: linear-gradient(45deg,#00ffdd,#00ffaa);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
