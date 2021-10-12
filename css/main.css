@@ -58,7 +58,7 @@
 }
 
 body {
-  background-color: #D3FFF8;
+  background-color: #00ffd5;
 }
 
 header.header .row {
@@ -93,12 +93,7 @@ header.header .top-selected {
   -webkit-text-fill-color: transparent;
 }
 
-@media only screen and (max-width: 992px){
-  header.header .row {
-    width: 80%;
-    padding-left: 48px;
-  }
-}
+
 
 header.header h1, .modal h1{
   
@@ -291,23 +286,6 @@ button.eval i {
   }
 }
 
-@media only screen and (max-width: 600px){
-  #sets2 {
-    width: 100%;
-  }
-  
-  #sets3 {
-    width: 100%;
-  }
-  
-  #sets4 {
-    width: 100%;
-  }
-
-  #sets5 {
-    width: 100%;
-  }
-}
 
 .receptor {
   position: relative;
