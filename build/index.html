@@ -2,7 +2,8 @@
     <head><link rel="shortcut icon" href="./../images/favicon.ico" type="image/x-icon">
         <link rel="icon" href="./../images/favicon.ico" type="image/x-icon">
         <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700,800&amp;display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><link type="text/css" rel="stylesheet" href="./../css/materialize.min.css" 
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="./../css/materialize.min.css" 
         media="screen,projection">
         <link type="text/css" rel="stylesheet" href="./../css/main.css"><meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Math X Graphics</title></head>
@@ -18,21 +19,28 @@
 
             contenedor.style.visibility = 'hidden';
             contenedor.style.opacity = '0';
-          }
-        
+          }       
           </script>
 
         <div class="receptor"><div id="float"></div></div>
         <header class="header"><div class="row"></div>
           <div class="col s12 l5"><center><h1>Math X Graphics</h1></center>
             
-             
-            
+         <br>
+         <br>
+         <br>
+         <br>               
          
                 
-          <div class="col l7 hide-on-med-and-down naving"><div class="row">         
-                
-        <div class="row"><form class="col s12 l4"><center><h2>Operador</h2> </center>      
+        <div class="row"><form class="col s12 l4"><center><h2>OPERADOR</h2> </center>  
+          <hr>
+          <h10><center>
+            <p>OPERACIONES DISPONIBLES:</p>
+            <p>U : Unión</p>
+            <p>^ : Intersección</p>
+            <p>- : Diferencia</p>
+            <p>' : Complemento</p>
+          </center></h10>    
           
           <div class="row"><div class="input-field col s12">
             <input id="expression" type="text"><label for="expression">Ingresa la operación</label>
@@ -46,17 +54,11 @@
                <label>Número de conjuntos</label></div><div class="input-field col s12 elements">
                 <p><label><input id="useEl" type="checkbox" onclick="toggleElements()">
                    <span>Conjuntos</span></label></p><div class="down" id="elements"></div>
-                   <right>
-                    <p>OPERACIONES DISPONIBLES:</p>
-                    <p>U : Unión</p>
-                    <p>^ : Intersección</p>
-                    <p>- : Diferencia</p>
-                    <p>' : Complemento</p>
-                  </right></div>
+                  </div>
             <div class="input-field col s12">
               
                 <button class="waves-effect waves-light btn eval" onclick="eval()" type="button">
-                    <i class="material-icons left">forward</i>Evaluar</button></div></div>
+                    <i class="material-icons left">forward</i>Resolver</button></div></div>
                     
                     <div class="row"><div class="col s12" id="logo"><p><img src="./../images/logo.png" alt="Logo chido"></p></div>
                     <div class="col s12" id="diagram"><svg class="svg-effects"><defs><linearGradient 
@@ -66,7 +68,8 @@
                         <feOffset dx="2" dy="2" result="offsetblur"/>
                         <feComponentTransfer><feFuncA type="linear" slope="0.5"/></feComponentTransfer><feMerge><feMergeNode/>
                         <feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
-                      </svg><div class="hide center" id="sets2"><svg viewBox="0 0 303 303" xmlns="http://www.w3.org/2000/svg"> 
+                      </svg><div class="hide center" id="sets2"><svg viewBox="0 0 303 303" xmlns="http://www.w3.org/2000/svg">
+                        
                         <style>
                            .dg {
                         fill: #E5E7E9;
@@ -77,7 +80,9 @@
                       } 
                       .p {
                         fill: #4f755c !important;
-                      }</style><path class="dg" id="f2_4" d="M0.5,0.5v300h300V0.5H0.5z M202,225c-20.4,
+                      }</style>
+                      
+                      <path class="dg" id="f2_4" d="M0.5,0.5v300h300V0.5H0.5z M202,225c-20.4,
                       0-39-8.2-52.5-21.5C136,216.8,117.4,225,97,225c-41.4,0-75-33.6-75-75c0-41.4,33.6-75,75-75c20.4,
                       0,39,8.2,52.5,21.5C163,83.2,181.6,75,202,75c41.4,0,75,33.6,75,75 C277,191.4,243.4,225,202,225z"/>
                       <path class="dg" id="f2_2" transform="translate(148.5,74.5)" 
@@ -379,6 +384,7 @@
                       <script type="text/javascript" src="./../js/init.js"></script><script type="text/javascript" src="./../js/graphing.js"></script>
                       <script type="text/javascript" src="./../js/elements.js"></script><script type="text/javascript" src="./../js/vdg.js">
                     </script>
+                    
                     <hr>
                    <footer>
                       <center>
