@@ -105,12 +105,12 @@ let eval = () => {
 
       console.log(sets);
 
-      var data = 'Conjunto resultante: ';
+      var data = `${x} = {`;
       for (var i = 0; i < e.length; ++i) {
         if (e[i])
-          data += sets[i] == '' ? '' : `${sets[i]},`;
+          data += sets[i] == '' ? '' : `${sets[i]}, `;
       }
-
+      data += `}`
       if (e[e.length - 1]) data += '<br>No se define el conjunto universo.';
 
       D.getId('elements-result').innerHTML = data;

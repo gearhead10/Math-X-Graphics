@@ -2,7 +2,7 @@ let bitCount = n => {
   var r = 0;
 
   while (n) n >>>= 1, r++;
-  
+
   return r;
 }
 
@@ -14,6 +14,7 @@ let isOperator = c => {
     case "'":
     case '(':
     case ')':
+    case '#':
       return true;
   }
   return false;
@@ -119,6 +120,8 @@ let complement = (a, universe) => universe & ~a;
 
 let substraction = (a, b) => a ^ b & a;
 
+let diferencia = (a, b) => substraction(a,b) | substraction(b,a);
+
 let evaluate = (postfix, n) => {
   var sets = setUniverse(n);
   var universe = sets[6];
@@ -149,6 +152,10 @@ let evaluate = (postfix, n) => {
         case "'":
           pila[j] = complement(pila[j], universe);
           break;
+
+        case "#":
+          pila[j] = diferencia(pila[j-1], pila[j]);
+          break;
       }
 
       continue;
@@ -158,35 +165,35 @@ let evaluate = (postfix, n) => {
       case 'A': case 'a':
         pila[++j] = sets[0];
         break;
-      
+
       case 'B': case 'b':
         pila[++j] = sets[1];
         break;
-      
+
       case 'C': case 'c':
         pila[++j] = sets[2];
         break;
-      
+
       case 'D': case 'd':
         pila[++j] = sets[3];
         break;
-      
+
       case 'E': case 'e':
         pila[++j] = sets[4];
         break;
-      
+
       case 'S': case 's':
         pila[++j] = sets[5];
         break;
-      
+
       case 'Ω': case 'O':
         pila[++j] = sets[6];
         break;
-      
+
       case '∅': case '0': case 'Ø':
         pila[++j] = 0;
         break;
-      
+
       default:
         throw "Símbolo desconocido: " + c;
     }
@@ -217,8 +224,8 @@ let isTerminal = c => {
 let prepros = s => {
   s = s.replace(/\s/g, '');
 
-  for (var i = 0; i < s.length - 1; ++i){
-    if (isTerminal(s.charAt(i)) && isTerminal(s.charAt(i + 1))){
+  for (var i = 0; i < s.length - 1; ++i) {
+    if (isTerminal(s.charAt(i)) && isTerminal(s.charAt(i + 1))) {
       var left = s.substring(0, i + 1);
       var right = s.substring(i + 1, s.length);
 

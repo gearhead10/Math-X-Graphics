@@ -1,6 +1,6 @@
 * {
   font-family: 'Poppins', sans-serif;
-  color: #11A67B;
+  color: #3f7b74;
   font-weight: bold;
   margin: 0;
   box-sizing: border-box;
@@ -177,12 +177,13 @@ main .elements p{
 
 #elements.upp {
   max-height: 500px;
+  width:100%;
   transition: max-height 0.25s ease-in, box-shadow 0.15s ease-in;
   box-shadow: 0 2px 3px 1px rgba(44, 44, 44, 0.3);
 }
 
 button.eval {
-  background: linear-gradient(45deg,#0BE0D5,#e52e71);
+  background: linear-gradient(45deg,#00fff2,#9900ff);
 }
 
 button.eval i {
@@ -369,7 +370,7 @@ button.eval i {
 }
 
 #elements-result {
-  font-size: 2em;
+  font-size: 1  em;
 }
 
 #canvas {
