@@ -14,3 +14,10 @@ Prueba LOG v0.5 alpha
 ** Cambios menores en el archivo CSS.
 ** Añadida una pequeña lista de operaciones dentro del div.
 ** Bug de divs hallados.
+
+-- v0.8.5 --
+
+** Cambios en HTML - Añadido saltos de linea y remoción de div.
+** Actualización de lineas en el archivo CSS.
+** Ubicado errores principales en el HTML --> archivo materialize.main.CSS
+** Minor bugs fixed.
