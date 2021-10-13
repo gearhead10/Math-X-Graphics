@@ -21,6 +21,7 @@ Prueba LOG v0.5 alpha
 ** Actualización de lineas en el archivo CSS.
 ** Ubicado errores principales en el HTML --> archivo materialize.main.CSS
 ** Minor bugs fixed.
+** add tooltip
 
 
 HOLA
