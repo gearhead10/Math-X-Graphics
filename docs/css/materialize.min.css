@@ -7589,3 +7589,12 @@ footer {
 #elements-result{
     font-size: 30px;
 }
+.tooltip1{
+    display:flex;
+    position: relative;
+    float: right;
+    padding: 50px;
+    background:rgb(255, 255, 255);
+    border-radius: 11%;
+    margin: 10px;
+}

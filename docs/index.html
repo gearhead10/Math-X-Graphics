@@ -12,9 +12,11 @@
 </head>
 
 <body>
+  
   <div id="contenedor_carga">
     <div id="carga"></div>
   </div>
+  
   <script>
     window.onload = function () {
       var contenedor = document.getElementById('contenedor_carga');
@@ -24,7 +26,14 @@
     }
 
   </script>
-
+<div class="tooltip1">
+  <ul>
+    <li>Union U</li>
+    <li>Intersection ^</li>
+    <li>Diferencia simetrica #</li>
+    <li></li>
+  </ul>
+</div>
   <div class="receptor">
     <div id="float"></div>
   </div>
@@ -75,6 +84,7 @@
                     <div class="col s12" id="logo">
                       <p><img src="./images/logo.png" alt="Logo chido"></p>
                     </div>
+                    
                     <div class="col s12" id="diagram"><svg class="svg-effects">
                         <defs>
                           <linearGradient id="svg-grad" x1="0%" y1="0%" x2="150%" y2="0%">
@@ -447,8 +457,11 @@
                       </div>
                     </div>
                   </div>
+                 
                 </div>
+                
                 <div class="col s12"><canvas id="canvas"></canvas></div>
+                
             </div>
             <footer>
 
