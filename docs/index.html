@@ -8,15 +8,16 @@
   <link type="text/css" rel="stylesheet" href="./css/materialize.min.css" media="screen,projection">
   <link type="text/css" rel="stylesheet" href="./css/main.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
   <title>Math X Graphics</title>
 </head>
 
 <body>
-  
+
   <div id="contenedor_carga">
     <div id="carga"></div>
   </div>
-  
+
   <script>
     window.onload = function () {
       var contenedor = document.getElementById('contenedor_carga');
@@ -26,14 +27,7 @@
     }
 
   </script>
-<div class="tooltip1">
-  <ul>
-    <li>Union U</li>
-    <li>Intersection ^</li>
-    <li>Diferencia simetrica #</li>
-    <li></li>
-  </ul>
-</div>
+  
   <div class="receptor">
     <div id="float"></div>
   </div>
@@ -84,7 +78,7 @@
                     <div class="col s12" id="logo">
                       <p><img src="./images/logo.png" alt="Logo chido"></p>
                     </div>
-                    
+
                     <div class="col s12" id="diagram"><svg class="svg-effects">
                         <defs>
                           <linearGradient id="svg-grad" x1="0%" y1="0%" x2="150%" y2="0%">
@@ -457,11 +451,21 @@
                       </div>
                     </div>
                   </div>
-                 
+
                 </div>
-                
+
                 <div class="col s12"><canvas id="canvas"></canvas></div>
-                
+               
+            </div>
+            <div class="tooltip1">
+              <ul>
+                <span class="icon-question"></span>
+                <hr class="iiu"></hr>
+                <li>Union U</li>
+                <li>Intersection ^</li>
+                <li>Diferencia simetrica #</li>
+                <li></li>
+              </ul>
             </div>
             <footer>
 

@@ -7534,28 +7534,25 @@ input[type=range]::-ms-thumb {
     }
 }
 
-.row {
-    margin-left: 12%;
-    width: 80%;
-    max-width: 2000px;
-    overflow: hidden;
-}
+
 
 .row .col.l4 {
-    margin-right: 30%;
     display: flex;
     justify-content: center;
-    max-width: 1000px;
-    overflow: hidden;
+    max-width: 700px;
     border: 1px solid #fff;
     background-color: #fff;
     border-radius: 3%;
     margin-bottom: 5%;
     padding: 4.5rem 0 0 0;
-    padding-right: 15rem;
+    margin-left: auto;
+    margin-right: auto;
     box-shadow: 15px 15px 10px 10px rgba(0, 0, 0, 0.377);
 }
-
+.iiu{
+   background-color:#004d40;
+   border: .11px solid #004d40;
+}
 footer {
     bottom: -87%;
     font-size: 25px;
@@ -7587,14 +7584,34 @@ footer {
     }
 }
 #elements-result{
-    font-size: 30px;
+    font-size: 25px;
 }
 .tooltip1{
+    max-width:220px;
     display:flex;
-    position: relative;
+    position: absolute;
+    right: 7%;
+    top: 50%;
     float: right;
-    padding: 50px;
+    padding: 15px;
     background:rgb(255, 255, 255);
     border-radius: 11%;
     margin: 10px;
+    box-shadow: 15px 15px 20px 10px rgba(0, 0, 0, 0.377);
+}
+@media screen and (max-width: 1300px) {
+    .tooltip1{
+        display: none;
+    }
+}
+@media screen and (max-width: 500px) {
+    .row .col.l4{
+        font-size:10px;
+    }
+    .row .mylog {
+        width: 170%;
+    }
+    #elements-result{
+        font-size: 13px;
+    }
 }
