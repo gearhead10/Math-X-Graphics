@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math X Graphics</title>
+    <link rel="stylesheet" href="css/Lading.css">
+    <script src="https://kit.fontawesome.com/edb0f779f5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- NAVBAR  -->
+    <nav class="menu">
+        <label class="logo">Math X Graphics</label>
+        <ul class="menu_items">
+            <li class="active"><a href="#">Inicio</a></li>
+            <li><a href="#">Documentacíon</a></li>
+            <li><a href="#">Ayuda</a></li>
+        </ul>
+        <span class="btn_menu">
+            <i class="fas fa-bars"></i>
+        </span>
+    </nav>
+
+<!-- SECTION OPERATIONS-->
+    <div class="container">
+    </div>
+
+    <script>
+        addEventListener('DOMContentLoaded', () =>{
+            const btn_menu = document.querySelector('.btn_menu');
+            if(btn_menu){
+                btn_menu.addEventListener('click', () =>{
+                    const menu_items = document.querySelector('.menu_items');
+                    menu_items.classList.toggle('show');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

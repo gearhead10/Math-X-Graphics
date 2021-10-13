@@ -30,8 +30,7 @@
                 
         <div class="row"><form class="col s12 l4"><h1>Operador</h1>       
           <div class="row"><div class="input-field col s12">
-            <input id="expression" type="text"><label for="expression">Ingresa la operación</label>
-              </div>
+            
           <div class="input-field col s12"><select id="n-sets" onchange="buildElements()">
              <option value="auto" selected>Selecciona un valor</option>
              <option value="2">2 Conjuntos</option><option value="3">3 Conjuntos</option>
@@ -39,7 +38,8 @@
                <label>Número de conjuntos</label></div><div class="input-field col s12 elements">
                 <p><label><input id="useEl" type="checkbox" onclick="toggleElements()">
                    <span>Conjuntos</span></label></p><div class="down" id="elements"></div></div>
-            <div class="input-field col s12">
+            <div class="input-field col s12"><input id="expression" type="text"><label for="expression">Ingresa la operación</label>
+              </div>
                 <button class="waves-effect waves-light btn eval" onclick="eval()" type="button">
                     <i class="material-icons left">forward</i>Evaluar</button></div></div>
                     <div class="row"><div class="col s12" id="logo"><p><img src="./../images/logo.png" alt="Logo chido"></p></div>
