@@ -5,7 +5,6 @@ let userSets = () => {
   return n === 'auto' ? 0 : Number.parseInt(n);
 }
 
-
 let buildElements = () => {
   var n = userSets();
   
