@@ -1,16 +1,19 @@
 
+//Aqui se está retornando el número de conjuntos que se seleccionaron
 let userSets = () => {
   var s = D.getId('n-sets');
   var n = s.options[s.selectedIndex].value;
   return n === 'auto' ? 0 : Number.parseInt(n);
 }
 
+//Esta función se llama en el fron al momento de seleccional el número de conjuntos
+//Lo que hace es contruir los campos(input) donde se ingresarán los valores de cada conjunto
 let buildElements = () => {
   var n = userSets();
-  
+
   var row = D.create('div');
   row.className = 'row';
-  
+
   for (var i = 0; i < n; ++i) {
     var letter = String.fromCharCode(65 + i);
 
@@ -53,6 +56,7 @@ let toggleElements = () => {
 
 let sets = [];
 
+//Esta variable almacena un vector con los nombres de cada operación, pero de los que salen en el modal del diagrama al dar click en el conjunto
 let nameSets = [
   ['A-B', 'B-A', 'A^B', 'S'],
   ['A-B-C', 'B-A-C', 'C-B-A', 'A^B-C', 'B^C-A', 'A^C-B', 'A^B^C', 'S'],
@@ -62,57 +66,63 @@ let nameSets = [
 
 let currentDigram = '';
 
+//Está función se llama al momento de dar click en el generar conjunto y resultado final
 let eval = () => {
+  var inpA = document.getElementById('settA');
   var x = D.getId("expression").value;
   x = prepros(x);
 
   var n = userSets();
-  if (x) {
-    D.getId('logo').classList.add('hide');
+  if (inpA != '') {
+    if (x) {
+      D.getId('logo').classList.add('hide');
 
-    var p = toPost(x);
-    var e = evaluate(p, n);
+      var p = toPost(x);
+      var e = evaluate(p, n);
 
-    for (var i = 2; i < 6; ++i) {
-      var tmp = `sets${i}`;
-      if (i === n) {
-        D.getId(tmp).classList.remove('hide');
-        currentDigram = tmp;
+      for (var i = 2; i < 6; ++i) {
+        var tmp = `sets${i}`;
+        if (i === n) {
+          D.getId(tmp).classList.remove('hide');
+          currentDigram = tmp;
+        }
+        else {
+          D.getId(tmp).classList.add('hide');
+        }
       }
-      else {
-        D.getId(tmp).classList.add('hide');
-      }
-    }
 
-    for (var i = 0; i < e.length; ++i) {
-      var tmp = `f${n}_${i + 1}`;
-
-      if (e[i])
-        D.getId(tmp).classList.add('p');
-
-      else
-        D.getId(tmp).classList.remove('p');
-
-    }
-
-    var val = D.getId("useEl").checked;
-
-    if (val) {
-      sets = evalElements(n);
-
-      if (sets.length == 0) return;
-
-      console.log(sets);
-
-      var data = `${x} = {`;
       for (var i = 0; i < e.length; ++i) {
-        if (e[i])
-          data += sets[i] == '' ? '' : `${sets[i]}, `;
-      }
-      data += `}`
-      if (e[e.length - 1]) data += '<br>No se define el conjunto universo.';
+        var tmp = `f${n}_${i + 1}`;
 
-      D.getId('elements-result').innerHTML = data;
+        if (e[i])
+          D.getId(tmp).classList.add('p');
+
+        else
+          D.getId(tmp).classList.remove('p');
+
+      }
+
+      var val = D.getId("useEl").checked;
+
+      if (val) {
+        sets = evalElements(n);
+
+        if (sets.length == 0) return;
+
+        console.log(sets);
+
+        var data = `${x} = {`;
+        for (var i = 0; i < e.length; ++i) {
+          if (e[i])
+            data += sets[i] == '' ? '' : `${sets[i]}, `;
+        }
+        data += `}`
+        if (e[e.length - 1]) data += '<br>Recuerda definir el conjunto universo.';
+
+        D.getId('elements-result').innerHTML = data;
+      }
+    } else {
+      D.getId('elements-result').innerHTML = 'Error';
     }
   }else{
     D.getId('elements-result').innerHTML = 'Error';

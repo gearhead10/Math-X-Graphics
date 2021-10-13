@@ -6,6 +6,7 @@ let bitCount = n => {
   return r;
 }
 
+//Aqui se indica cuales seran los simbolos de cada operación
 let isOperator = c => {
   switch (c) {
     case 'U':
