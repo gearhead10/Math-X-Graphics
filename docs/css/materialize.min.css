@@ -7604,6 +7604,7 @@ footer {
         display: none;
     }
 }
+
 @media screen and (max-width: 500px) {
     .row .col.l4{
         font-size:10px;
