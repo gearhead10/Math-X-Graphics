@@ -8,19 +8,25 @@
   <link type="text/css" rel="stylesheet" href="./../css/materialize.min.css" media="screen,projection">
   <link type="text/css" rel="stylesheet" href="./../css/main.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Math X Graphics</title>
-</head>
+  <script type="text/javascript" src="./../js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="./../js/materialize.min.js"></script>
+  <script type="text/javascript" src="./../js/init.js"></script>
+  <script type="text/javascript" src="./../js/graphing.js"></script>
+  <script type="text/javascript" src="./../js/elements.js"></script>
+  <script type="text/javascript" src="./../js/vdg.js"></script>
+    <title>Math X Graphics</title>
+</head >
 
-<body>
-  <div id="contenedor_carga">
-    <div id="carga"></div>
-  </div>
-  <script>
-    window.onload = function () {
+      <body>
+        <div id="contenedor_carga">
+          <div id="carga"></div>
+        </div>
+        <script>
+          window.onload = function () {
       var contenedor = document.getElementById('contenedor_carga');
 
-      contenedor.style.visibility = 'hidden';
-      contenedor.style.opacity = '0';
+          contenedor.style.visibility = 'hidden';
+          contenedor.style.opacity = '0';
     }
 
   </script>
@@ -43,7 +49,7 @@
                 <div class="row">
 
                   <div class="input-field col s12"><select id="n-sets" onchange="buildElements()">
-                      <option value="auto" selected>Selecciona un valor</option>
+                      <option value="auto" selected>Selecciona el número de conjuntos</option>
                       <option value="2">2 Conjuntos</option>
                       <option value="3">3 Conjuntos</option>
                       <option value="4">4 Conjuntos</option>
@@ -469,13 +475,8 @@
             <section>
   </header>
 
-</body>
-<script type="text/javascript" src="./../js/jquery-3.4.1.min.js"></script>
-<script type="text/javascript" src="./../js/materialize.min.js"></script>
-<script type="text/javascript" src="./../js/init.js"></script>
-<script type="text/javascript" src="./../js/graphing.js"></script>
-<script type="text/javascript" src="./../js/elements.js"></script>
-<script type="text/javascript" src="./../js/vdg.js">
-</script>
+  </body>
 
-</html>
+  </script>
+
+  </html>

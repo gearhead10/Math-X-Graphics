@@ -115,6 +115,8 @@ let eval = () => {
 
       D.getId('elements-result').innerHTML = data;
     }
+  }else{
+    D.getId('elements-result').innerHTML = 'Error';
   }
 }
 
