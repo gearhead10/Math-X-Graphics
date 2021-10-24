@@ -117,15 +117,17 @@ let union = (a, b) => a | b;
 
 let intersection = (a, b) => a & b;
 
-let complement = (a, universe) => universe & ~a;
+// let complement = (a, universe) => universe & ~a;
 
 let substraction = (a, b) => a ^ b & a;
+let complement = (u,a) => substraction(u,a);
 
 let diferencia = (a, b) => substraction(a,b) | substraction(b,a);
 
 let evaluate = (postfix, n) => {
   var sets = setUniverse(n);
   var universe = sets[6];
+  var setUni = document.getElementById('univ');
 
   var pila = new Array(200);
   var j = -1;
@@ -203,7 +205,7 @@ let evaluate = (postfix, n) => {
   let r = [], l = bitCount(universe);
   for (var i = l - 1; i >= 0; --i)
     r.push((pila[j] >> i) & 1);
-
+console.log(universe)
   return r;
 }
 

@@ -1,7 +1,7 @@
 <!Doctype html>
 
 <head>
-  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="./images/forma.png" type="image/x-icon">
   <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700,800&amp;display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -27,7 +27,7 @@
     }
 
   </script>
-  
+
   <div class="receptor">
     <div id="float"></div>
   </div>
@@ -47,6 +47,7 @@
 
                   <div class="input-field col s12"><select id="n-sets" onchange="buildElements()">
                       <option value="auto" selected>Selecciona un valor</option>
+                      <option value="1">1 Conjunto</option>
                       <option value="2">2 Conjuntos</option>
                       <option value="3">3 Conjuntos</option>
                       <option value="4">4 Conjuntos</option>
@@ -55,30 +56,32 @@
                     <label>Número de conjuntos</label>
                   </div>
                   <div class="">
+                    
                     <div class="input-field">
-                      <input id="expression" type="text"><label for="expression">Ingresa la operación</label>
+                      <input id="expression" type="text" required><label for="expression">Ingresa la operación</label>
                     </div>
-                    <div class="help">
-                      <ul hidden id="x2">
-                        <li>U = Union</li>
-                      </ul>
-                    </div>
+
                     <div class="input-field col s12 elements">
                       <p><label><input id="useEl" type="checkbox" onclick="toggleElements()">
                           <span>Conjuntos</span></label></p>
                       <div class="down" id="elements"></div>
                     </div>
+                    
                     <div class="input-field col s12">
-                      <button class="waves-effect waves-light btn eval" onclick="eval()" type="button">
-                        Evaluar
+                      <button class="button" onclick="eval()" type="button">
+                        Iniciar<span class="icon-arrow-right"></span>
                       </button>
                     </div>
                   </div>
+                  <div class="col s12">
+                    <div class="row">
+                      <div class="col s12 center-align" id="elements-result"></div>
+                    </div>
                   <div class="row mylog">
                     <div class="col s12" id="logo">
-                      <p><img src="./images/logo.png" alt="Logo chido"></p>
+                      <p><img src="./images/forma.png" alt="Logo chido"></p>
                     </div>
-
+                    </div>
                     <div class="col s12" id="diagram"><svg class="svg-effects">
                         <defs>
                           <linearGradient id="svg-grad" x1="0%" y1="0%" x2="150%" y2="0%">
@@ -109,7 +112,7 @@
                             }
 
                             .p {
-                              fill: #9e9e9e !important;
+                              fill: #ff0000 !important;
                             }
                           </style>
                           <path class="dg" id="f2_4"
@@ -137,7 +140,7 @@
                             }
 
                             .p {
-                              fill: #ffffff !important;
+                              fill: #ff0000 !important;
                             }
                           </style>
                           <path class="dg" id="f3_8" d="M0.5,0.5v300h300V0.5H0.5z M223.5,
@@ -179,7 +182,7 @@
                             }
 
                             .p {
-                              fill: #7e23d4 !important;
+                              fill: #00ff55 !important;
                             }
                           </style>
                           <path class="dg" id="f4_16"
@@ -354,7 +357,7 @@
                             }
 
                             .p {
-                              fill: #aab4bb !important;
+                              fill: #3cff00 !important;
                             }
 
                             text {
@@ -445,30 +448,25 @@
                           <text transform="translate(20,60)">E</text><text transform="translate(10,25)">Ω</text>
                         </svg></div>
                     </div>
-                    <div class="col s12">
-                      <div class="row">
-                        <div class="col s12 center-align" id="elements-result"></div>
-                      </div>
-                    </div>
+                    
                   </div>
 
                 </div>
 
                 <div class="col s12"><canvas id="canvas"></canvas></div>
-               
+
             </div>
             <div class="tooltip1">
               <ul>
-                <span class="icon-question"></span>
-                <li>Union U</li>
-                <li>Intersection ^</li>
-                <li>Diferencia simetrica #</li>
-                <li></li>
+                <span class="icon-info"></span> Información
+                <li><h5>U = Unión</h5></li>
+                <li><h5>^ = Intersection</h5></li>
+                <li><h5>- = diferencia</h5></li>
+                <li><h5>' = Complemento</h5></li>
+                <li><h5># = Diferencia Simetrica</h5></li>
               </ul>
             </div>
             <footer>
-
-
               <p>
                 <small class="block">&copy; 2021 :: Juan Jaraba - Daniel González - Fernando Fernández - Andrés Angulo -
                   Valentina Picón :: All Rights Reserved.</small>

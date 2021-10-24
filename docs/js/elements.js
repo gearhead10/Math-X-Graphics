@@ -188,12 +188,13 @@ let evalElements = n =>{
     words = words.map(e => emojis(e));
     
     if (words.length === 0) count++;
-
+    
     sets.push(words);
+    console.log(sets[0], sets[1], sets[2], sets[3]);
   }
 
   if (count == n) return [];
-
+  console.log(buildPieces(sets, n))
   return buildPieces(sets, n);
 }
 

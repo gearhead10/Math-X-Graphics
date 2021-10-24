@@ -7539,7 +7539,7 @@ input[type=range]::-ms-thumb {
 .row .col.l4 {
     display: flex;
     justify-content: center;
-    max-width: 700px;
+    max-width: 900px;
     border: 1px solid #fff;
     background-color: #fff;
     border-radius: 3%;
@@ -7590,7 +7590,7 @@ footer {
     max-width:220px;
     display:flex;
     position: absolute;
-    right: 7%;
+    right: 2%;
     top: 50%;
     float: right;
     padding: 15px;
@@ -7599,18 +7599,20 @@ footer {
     margin: 10px;
     box-shadow: 15px 15px 20px 10px rgba(0, 0, 0, 0.377);
 }
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1400px) {
     .tooltip1{
         display: none;
     }
 }
 
 @media screen and (max-width: 500px) {
+   
     .row .col.l4{
         font-size:10px;
+       
     }
     .row .mylog {
-        width: 170%;
+        width: 200%;
     }
     #elements-result{
         font-size: 13px;
