@@ -194,6 +194,7 @@ main .elements p {
 }
  
 .button {
+  margin-top: 4%;
   min-width: 140px;
   min-height: 40px;
   font-family: 'Nunito', sans-serif;
@@ -273,6 +274,9 @@ button.eval i {
 
 #logo {
   position: relative;
+  width: 90%;
+  margin-left:auto;
+  margin-right: auto;
 }
 
 #logo p {

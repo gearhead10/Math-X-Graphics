@@ -83,7 +83,7 @@ let toPost = infix => {
 
   for (var i = 0; i < infix.length; ++i) {
     var c = infix.charAt(i);
-
+    console.log(c)
     if (!isOperator(c))
       post += c
 
@@ -113,22 +113,28 @@ let toPost = infix => {
   return post;
 }
 
+let myuniver = () => {
+  var conjuntoU = []
+  var uni = document.getElementById('univ').value;
+  var words = uni.split(",");
+  conjuntoU.concat(words);
+  return conjuntoU
+}
+
 let union = (a, b) => a | b;
 
 let intersection = (a, b) => a & b;
 
-// let complement = (a, universe) => universe & ~a;
 
 let substraction = (a, b) => a ^ b & a;
-let complement = (u,a) => substraction(u,a);
+let complement = (a, u) => substraction(u, a);
+
 
 let diferencia = (a, b) => substraction(a,b) | substraction(b,a);
 
 let evaluate = (postfix, n) => {
   var sets = setUniverse(n);
   var universe = sets[6];
-  var setUni = document.getElementById('univ');
-
   var pila = new Array(200);
   var j = -1;
 
@@ -153,7 +159,8 @@ let evaluate = (postfix, n) => {
           break;
 
         case "'":
-          pila[j] = complement(pila[j], universe);
+          pila[j-1] = complement(pila[j-1], universe);
+          j--;
           break;
 
         case "#":
@@ -205,7 +212,7 @@ let evaluate = (postfix, n) => {
   let r = [], l = bitCount(universe);
   for (var i = l - 1; i >= 0; --i)
     r.push((pila[j] >> i) & 1);
-console.log(universe)
+console.log(r)
   return r;
 }
 
@@ -226,7 +233,6 @@ let isTerminal = c => {
 
 let prepros = s => {
   s = s.replace(/\s/g, '');
-
   for (var i = 0; i < s.length - 1; ++i) {
     if (isTerminal(s.charAt(i)) && isTerminal(s.charAt(i + 1))) {
       var left = s.substring(0, i + 1);

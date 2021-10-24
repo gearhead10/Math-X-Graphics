@@ -7566,8 +7566,7 @@ footer {
 
 .row .mylog {
     margin-top: 20%;
-    width: 170%;
-    margin-left: -50%;
+
 }
 
 @media screen and (max-width: 1120px) {
@@ -7611,9 +7610,7 @@ footer {
         font-size:10px;
        
     }
-    .row .mylog {
-        width: 200%;
-    }
+    
     #elements-result{
         font-size: 13px;
     }

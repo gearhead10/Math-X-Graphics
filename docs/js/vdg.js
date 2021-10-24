@@ -85,7 +85,7 @@ let nameSets = [
 
 let currentDigram = '';
 
-//Está función se llama al momento de dar click en el generar conjunto y resultado final
+//Está función se llama al momento de dar click en el generar conjunto
 let eval = () => {
   var x = D.getId("expression").value;
   var Univ = D.getId("univ").value;
@@ -128,7 +128,7 @@ let eval = () => {
 
       if (sets.length == 0) return;
 
-       console.log(sets);
+       
        sets[3] = valuesUniverso;
        var data = `${x} = {`;
        for (var i = 0; i < e.length; ++i) {
@@ -180,10 +180,9 @@ let floatClick = function (e) {
   content.className = 'float-content';
   var section = this.id.split(/_/)[1];
   var n = this.id.charAt(1);
-  var data = '<div class = "row"><div class="col s12">';
-  data += `<h1>${nameSets[n - 2][section - 1]}</h1><p>`;
-  
-  data += `${(sets[section - 1] == undefined || sets[section - 1].length == 0) ? 'Sin elementos' : sets[section - 1]}`;
+  var data = '<div style="margin-left:30px;" class = "row"><div class="col s12">';
+  data += `<h1 style="color:black;">${nameSets[n - 2][section - 1]}</h1><p>`;
+  data += `${(sets[section - 1] == undefined || sets[section - 1] == '' || sets[section - 1].length == 0) ? 'Sin elementos' : sets[section - 1]}`;
   data += '</p></div></div>';
 
   content.innerHTML = data;
