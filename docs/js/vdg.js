@@ -1,16 +1,27 @@
 
+//Aqui se está retornando el número de conjuntos que se seleccionaron
 let userSets = () => {
   var s = D.getId('n-sets');
   var n = s.options[s.selectedIndex].value;
   return n === 'auto' ? 0 : Number.parseInt(n);
 }
 
+//Esta función se llama en el fron al momento de seleccional el número de conjuntos
+//Lo que hace es contruir los campos(input) donde se ingresarán los valores de cada conjunto
 let buildElements = () => {
   var n = userSets();
-  
+
   var row = D.create('div');
   row.className = 'row';
-  
+
+  var uni = D.create('input');
+  uni.setAttribute('id', 'univ');
+  uni.setAttribute('type', 'text');
+
+
+  var Unilabel = D.create('label');
+  Unilabel.setAttribute('for', 'univ');
+  Unilabel.innerHTML = `Conjunto U`;
   for (var i = 0; i < n; ++i) {
     var letter = String.fromCharCode(65 + i);
 
@@ -18,7 +29,7 @@ let buildElements = () => {
     div.className = 'input-field col s12';
 
 
-    
+
     var input = D.create('input');
     input.setAttribute('id', `sett${letter}`);
     input.setAttribute('type', 'text');
@@ -27,10 +38,19 @@ let buildElements = () => {
     label.setAttribute('for', `sett${letter}`);
     label.innerHTML = `Conjunto ${letter}`;
 
+
+
+
     div.appendChild(input);
     div.appendChild(label);
     row.appendChild(div);
   }
+  div2 = D.create('div');
+  div2.className = 'input-field col s12';
+  div2.appendChild(uni);
+  div2.appendChild(Unilabel);
+  row.appendChild(div2);
+
 
   var e = D.getId('elements');
 
@@ -55,6 +75,7 @@ let toggleElements = () => {
 
 let sets = [];
 
+//Esta variable almacena un vector con los nombres de cada operación, pero de los que salen en el modal del diagrama al dar click en el conjunto
 let nameSets = [
   ['A-B', 'B-A', 'A^B', 'S'],
   ['A-B-C', 'B-A-C', 'C-B-A', 'A^B-C', 'B^C-A', 'A^C-B', 'A^B^C', 'S'],
@@ -64,17 +85,20 @@ let nameSets = [
 
 let currentDigram = '';
 
+//Está función se llama al momento de dar click en el generar conjunto
 let eval = () => {
   var x = D.getId("expression").value;
-  x = prepros(x);
+  var Univ = D.getId("univ").value;
+  var valuesUniverso = Univ.split(",");
 
+  x = prepros(x);
   var n = userSets();
   if (x) {
     D.getId('logo').classList.add('hide');
 
     var p = toPost(x);
     var e = evaluate(p, n);
-
+    console.log(e)
     for (var i = 2; i < 6; ++i) {
       var tmp = `sets${i}`;
       if (i === n) {
@@ -104,21 +128,27 @@ let eval = () => {
 
       if (sets.length == 0) return;
 
-      console.log(sets);
-
-      var data = `${x} = {`;
-      for (var i = 0; i < e.length; ++i) {
-        if (e[i])
-          data += sets[i] == '' ? '' : `${sets[i]}, `;
+       
+       sets[3] = valuesUniverso;
+       var data = `${x} = {`;
+       for (var i = 0; i < e.length; ++i) {
+         if (e[i])
+        if(sets[i] == '' || sets[i+1] == undefined){
+          data += ''
+        }else{
+          data += `${sets[i]},`
+        }
+          // data += sets[i] == ''? '' : `${sets[i]}, `;
       }
       data += `}`
-      if (e[e.length - 1]) data += '<br>No se define el conjunto universo.';
+      if (e[e.length - 1]) data += '<br>Recuerda definir el conjunto universo.';
 
       D.getId('elements-result').innerHTML = data;
     }
-  }else{
+  } else {
     D.getId('elements-result').innerHTML = 'Error';
   }
+
 }
 
 let recalculate = (x, y) => {
@@ -148,13 +178,11 @@ let floatClick = function (e) {
 
   var content = D.create('div');
   content.className = 'float-content';
-
   var section = this.id.split(/_/)[1];
   var n = this.id.charAt(1);
-
-  var data = '<div class = "row"><div class="col s12">';
-  data += `<h1>${nameSets[n - 2][section - 1]}</h1><p>`;
-  data += `${(sets[section - 1] == undefined || sets[section - 1].length == 0) ? 'Sin elementos' : sets[section - 1]}`;
+  var data = '<div style="margin-left:30px;" class = "row"><div class="col s12">';
+  data += `<h1 style="color:black;">${nameSets[n - 2][section - 1]}</h1><p>`;
+  data += `${(sets[section - 1] == undefined || sets[section - 1] == '' || sets[section - 1].length == 0) ? 'Sin elementos' : sets[section - 1]}`;
   data += '</p></div></div>';
 
   content.innerHTML = data;
