@@ -24,4 +24,14 @@ Prueba LOG v0.5 alpha
 ** add tooltip
 
 
-HOLA
+-- v1.3 --
+
+** Nuevos cambios en diseño con CSS3 y Bootstrap.
+** Minor bugs fixed.
+
+To do: 
+- Fix button effect
+- Fix responsive on iPhone
+- Change iPhone image
+- Remove socials icons buttons
+
