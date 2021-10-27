@@ -56,14 +56,14 @@ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 font-size: 17px;
 line-height: 1.42857;
 color: #52706f;
-background-color: #242D34;
+background-color: #ffffff;
   
 }
 .div-1{
-  background-color: #242D34;
+  background-color: #ffffff;
 }
 .div-2{
-  background-color: #242D34;
+  background-color: #ffffff;
   padding-bottom: 3%;
   padding: -3%;
 }
@@ -75,13 +75,13 @@ h1{
   font: bold 50px "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   margin-bottom: 12px;
-  background: linear-gradient(45deg,#000000,#000000);
+  background: linear-gradient(45deg,#ffffff,#ffffff);
   
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .h1-banner{
-background-color: #ffffff;
+background-color: #000000;
 padding: 1%;
 
 }
@@ -281,7 +281,7 @@ margin-top: 20px;
 margin-bottom: 30px; 
 }
 .ourFeatures {
-  background: #242D34;
+  background: #000000;
   text-align: left;
   padding: 100px 0 0;
 }
