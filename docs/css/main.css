@@ -62,8 +62,9 @@
 }
 
 body {
-  background-color: #000000;
+  background-color: #242D34;
 }
+
 
 header.header .row {
   padding-left: 30px;
@@ -111,7 +112,7 @@ header.header h1, .modal h1 {
   font-size: 2.1em;
   font-weight: 700;
   margin-bottom: 0;
-  background: linear-gradient(45deg, #0BE0D5, #ffffff);
+  background: linear-gradient(45deg, #ffffff, #ffffff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
