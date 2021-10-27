@@ -2593,7 +2593,7 @@ ul.staggered-list li {
     transform-origin: 0 50%
 }
 
-.page-footer {
+/*.page-footer {
     padding-top: 20px;
     color: #fff;
     background-color: #ee6e73
@@ -2618,7 +2618,7 @@ ul.staggered-list li {
     color: rgba(255, 255, 255, 0.8);
     background-color: rgba(51, 51, 51, 0.08)
 }
-
+*/
 table, th, td {
     border: none
 }

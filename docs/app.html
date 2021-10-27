@@ -9,7 +9,9 @@
   <link type="text/css" rel="stylesheet" href="./css/main.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.css">
-  <title>Math X Graphics</title>
+  <!--CSS importado del Index-->
+  <!--<link rel="stylesheet" href="./css/styles_index.css">-->
+  <title>Math X Graphics App</title>
 </head>
 
 <body>
@@ -21,12 +23,11 @@
   <script>
     window.onload = function () {
       var contenedor = document.getElementById('contenedor_carga');
-
       contenedor.style.visibility = 'hidden';
       contenedor.style.opacity = '0';
     }
-
   </script>
+
 
   <div class="receptor">
     <div id="float"></div>
@@ -483,29 +484,32 @@
             <div class="tooltip1">
               <ul>
                 <span class="icon-info"></span> Información
-                <li><h5>U = Unión</h5></li>
-                <li><h5>^ = Intersection</h5></li>
-                <li><h5>- = diferencia</h5></li>
-                <li><h5>' = Complemento</h5></li>
-                <li><h5># = Diferencia Simetrica</h5></li>
+                <li><h5>U -> Unión</h5></li>
+                <li><h5>^ -> Intersection</h5></li>
+                <li><h5>- -> diferencia</h5></li>
+                <li><h5>' -> Complemento</h5></li>
+                <li><h5># -> Diferencia Simetrica</h5></li>
               </ul>
             </div>
-            <footer>
-              <p>
-                <small class="block">&copy; 2021 :: Juan Jaraba - Daniel González - Fernando Fernández - Andrés Angulo -
-                  Valentina Picón :: All Rights Reserved.</small>
+      </header>
 
-              </p>
-              <p>
-                <small class="block">PCA 2021
-                </small>
-              </p>
-
-
+            <!--FOOTER-->
+            <footer class="footer-sect">
+              <div>
+                  <div>
+                      <div>
+                          <p>2021 - All rights reserved. <a href="https://github.com/gearhead10" target="_blank">Dev</a> by AWR COL</p>
+                          <p>Daniel González - Juan Jaraba - Andrés Angulo - Fernando Fernández - Valentina Picón</p>
+                          <p>PCA 2021</p>
+                          <br>
+                          <img src="images/logo-retina.png" width="50"> 
+                      </div>                     
+                  </div>
+              </div>
             </footer>
             </main>
             <section>
-  </header>
+  
 
 </body>
 <script type="text/javascript" src="./js/jquery-3.4.1.min.js"></script>
@@ -513,7 +517,6 @@
 <script type="text/javascript" src="./js/init.js"></script>
 <script type="text/javascript" src="./js/graphing.js"></script>
 <script type="text/javascript" src="./js/elements.js"></script>
-<script type="text/javascript" src="./js/vdg.js">
-</script>
+<script type="text/javascript" src="./js/vdg.js"></script>
 
 </html>
