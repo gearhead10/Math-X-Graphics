@@ -2593,7 +2593,7 @@ ul.staggered-list li {
     transform-origin: 0 50%
 }
 
-.page-footer {
+/*.page-footer {
     padding-top: 20px;
     color: #fff;
     background-color: #ee6e73
@@ -2618,6 +2618,7 @@ ul.staggered-list li {
     color: rgba(255, 255, 255, 0.8);
     background-color: rgba(51, 51, 51, 0.08)
 }
+*/
 
 table, th, td {
     border: none
@@ -7534,8 +7535,6 @@ input[type=range]::-ms-thumb {
     }
 }
 
-
-
 .row .col.l4 {
     display: flex;
     justify-content: center;
@@ -7549,24 +7548,53 @@ input[type=range]::-ms-thumb {
     margin-right: auto;
     box-shadow: 15px 15px 10px 10px rgba(0, 0, 0, 0.377);
 }
-.iiu{
-   background-color:#004d40;
-   border: .11px solid #004d40;
+
+.iiu {
+    background-color: #004d40;
+    border: .11px solid #004d40;
 }
+
 footer {
     bottom: -87%;
     font-size: 25px;
     padding: 50px;
     height: 100%;
     width: 100%;
-    border-radius: 50%;
     position: relative;
     color: rgb(255, 255, 255) !important;
 }
 
+footer p {
+    color: white!important;
+}
+
 .row .mylog {
     margin-top: 20%;
+}
 
+.tooltip {
+    float: right;
+    font-size: 30px;
+    margin: 4%;
+    display: none;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: rgb(255, 255, 255);
+    color: #fff;
+    border-radius: 6px;
+    padding: 0px 0;
+    box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.377);
+    position: absolute;
+    top: -150%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
 }
 
 @media screen and (max-width: 1120px) {
@@ -7578,40 +7606,55 @@ footer {
     }
     .row .col.l4 {
         font-size: 25px;
-        width:80%;
+        width: 80%;
         position: relative;
     }
+    .tooltip {
+        display: block;
+    }
+    .tooltip .tooltiptext {
+        top: 0%;
+        left: 65%;
+        margin-left: -60px;
+    }
 }
-#elements-result{
+
+#elements-result {
     font-size: 25px;
 }
-.tooltip1{
-    max-width:220px;
-    display:flex;
+
+.tooltip1 {
+    max-width: 220px;
+    display: flex;
     position: absolute;
     right: 2%;
     top: 50%;
     float: right;
     padding: 15px;
-    background:rgb(255, 255, 255);
+    background: rgb(255, 255, 255);
     border-radius: 11%;
     margin: 10px;
     box-shadow: 15px 15px 20px 10px rgba(0, 0, 0, 0.377);
 }
+
 @media screen and (max-width: 1400px) {
-    .tooltip1{
+    .tooltip1 {
         display: none;
     }
 }
 
 @media screen and (max-width: 500px) {
-   
-    .row .col.l4{
-        font-size:10px;
-       
+    .row .col.l4 {
+        font-size: 10px;
     }
-    
-    #elements-result{
+    #elements-result {
         font-size: 13px;
+    }
+    .tooltip .tooltiptext {
+        top: -150%;
+        left: 50%;
+        padding-left: 10px;
+        padding-top: 10px;
+        margin-left: -60px;
     }
 }

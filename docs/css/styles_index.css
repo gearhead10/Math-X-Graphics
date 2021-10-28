@@ -8,7 +8,7 @@
 } 
 
 #contenedor_carga{
-  background-color: rgba(0, 255, 213, 0.9);
+  background-color: rgba(255, 255, 255, 0.9);
   height: 100%;
   width: 100;
   position: center;
@@ -18,8 +18,8 @@
   z-index: 10000;
 }
 #carga{
-  border: 15px solid rgb(162, 0, 255);
-  border-top-color: #00b7ff;
+  border: 15px solid #ccc;
+  border-top-color: #F4266A;
   border-top-style: groove;
   height: 100px;
   width: 100px;
@@ -55,17 +55,35 @@ body {
 font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 font-size: 17px;
 line-height: 1.42857;
-color: #696f6f;
-background-color: rgb(255, 255, 255);
+color: #52706f;
+background-color: #ffffff;
+  
+}
+.div-1{
+  background-color: #ffffff;
+}
+.div-2{
+  background-color: #ffffff;
+  padding-bottom: 3%;
+  padding: -3%;
+}
+#boton_1{
+  padding: 3.5%;
 }
 h1{
   font-size: 50px;
-  font: bold 54px "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: bold 50px "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   margin-bottom: 12px;
-  background: linear-gradient(45deg,#000000,#000000);
+  background: linear-gradient(45deg,#ffffff,#ffffff);
+  
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.h1-banner{
+background-color: #242D34;
+padding: 1%;
+
 }
 h4{
 color: #1B1B1B;
@@ -98,9 +116,9 @@ border-color: #007BD3;
 }
 .button {
 color: white;
-background: #0379CD;
+background: #03c6cd;
 height: 58px;
-border: 2px solid #0379CD;
+border: 2px solid #03cdbc;
 font: 500 22px "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 padding: 0 21px;
 -moz-transition: color 0.1s linear, background-color 0.1s linear, border-color 0.1s linear;
@@ -132,7 +150,7 @@ a.button:hover {
 color: white;
 }
 .button:hover {
-background:#1384D5;
+background:#01f7ff;
 border-color: #1384D5;
 }
 .buttons-wrapper .button-stripe {
@@ -175,19 +193,30 @@ padding-bottom: 100px;
 .mainBanner {
 padding: 20px 0;
 margin-bottom: 0;
-color: rgb(0, 0, 0);
-background:#000000;
+color: rgb(255, 255, 255);
+background:#ffffff;
 background-size: cover;
 text-align: center;
-background:url(../images/bg2.jpg) top left repeat;
+background:url() top center;
 background-size:cover;
 } 	
+#logo{
+  display: flex;
+  position: relative;
+  width: 30%;
+  margin-left:auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  
+}
 .mainBanner .img-logo {
-display:flex;
+display:block;
+position: relative;
 width: auto;
 height: auto;
-margin-top: 50px;
-margin-bottom: 50px;
+margin-top: 20px;
+margin-bottom: 20px;
 }
 .mainBanner h1, .mainBanner .h1 {
 font-size: 35px;
@@ -223,7 +252,7 @@ padding: 0;
 display: flex;
 margin-left: auto;
 margin-right: auto;
-width: 400px;
+width: 200px;
 height: auto;
 }
 .highlights {
@@ -252,7 +281,7 @@ margin-top: 20px;
 margin-bottom: 30px; 
 }
 .ourFeatures {
-  background: #000000;
+  background: #242D34;
   text-align: left;
   padding: 100px 0 0;
 }
@@ -285,6 +314,16 @@ padding-bottom: 8px !important;
 .featuresBtm{
 margin-top:150px;
 margin-bottom:0px;
+}
+.gif{
+width: 70%;
+max-width: 960px;
+margin: 0 auto;
+padding-bottom: 2%;
+}
+.gif .img{
+width: 100%;
+height: auto;
 }
 .subscribe {
 background: #1F1F1F;
@@ -338,10 +377,10 @@ display: block;
 float:right;
 }
 .social-icons a{ 
-color: #64b51b;
+color: #00fce7;
 text-decoration: none;
 padding: 0px 0 0 15px;
-border: 1px solid #64b51b;
+border: 1px solid #00fce7;
 border-radius: 50%;
 width: 45px;
 float: left;
@@ -363,8 +402,9 @@ overflow: hidden;
 
 @media (max-width: 1200px){
 .mainBanner .img-logo{
+display: block;
 margin-top:0px;
-margin-bottom: 81px;
+margin-bottom: 1px;
 }
 .mainBanner .img-iPhone {
 width: 376px;
@@ -404,11 +444,11 @@ text-transform: uppercase;
 display: inline-block;
 } 
 .highlights { 
-margin-top: -100px !important;
+margin-top: -80px !important;
 }
 .mainBanner img.img-iPhone {
 position: fixed;
-bottom: -30px;
+bottom: -20px;
 display: none;
 }
 }
@@ -416,10 +456,12 @@ display: none;
  PRUEBA DE BOTÓN EN CSS CON WRAP RING!*/
  
 .wrap {
+  padding: 30px;
   height: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 .button {
@@ -430,8 +472,8 @@ display: none;
   text-transform: uppercase;
   letter-spacing: 1.3px;
   font-weight: 700;
-  color: #313133;
-  background: #fcfcfc;
+  color: #000000;
+  background: #ffffff;
   background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rrgb(255, 255, 255)100%);
   border: none;
   border-radius: 1000px;
@@ -448,7 +490,7 @@ content: '';
   border-radius: 100px;
   min-width: calc(150px + 12px);
   min-height: calc(60px + 12px);
-  border: 6px solid #000000;
+  border: 6px solid #00fff2;
   box-shadow: 0 0 60px rgba(243, 243, 243, 0.64);
   position: absolute;
   top: 50%;
@@ -471,13 +513,13 @@ button::after {
   content: '';
   width: 30px; height: 30px;
   border-radius: 100%;
-  border: 6px solid #000000;
+  border: 6px solid #00fff2;
   position: absolute;
   z-index: -1;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: ring 1.5s infinite;
+  animation: ring 2s infinite;
 }
 
 button:hover::after, button:focus::after {

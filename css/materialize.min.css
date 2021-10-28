@@ -1,4 +1,3 @@
-
 .yellow {
     background-color: #ffeb3b !important
 }
@@ -2234,9 +2233,6 @@ html {
     margin: 0
 }
 
-
-.card .card-content .card-title {
-
 .deep-orange-text.text-lighten-1 {
     color: #ff7043 !important
 }
@@ -2568,7 +2564,6 @@ html {
 .transparent-text {
     color: rgba(0, 0, 0, 0) !important
 }
-
 
 html {
     line-height: 1.15;
@@ -8122,6 +8117,7 @@ footer {
     margin-left: -50%;
 }
 
+
 @media screen and (max-width: 1120px) {
     .row {
         margin-left: 0;
@@ -8131,10 +8127,11 @@ footer {
     }
     .row .col.l4 {
         font-size: 25px;
-        width:80%;
+        width: 80%;
         position: relative;
     }
 }
-#elements-result{
+
+#elements-result {
     font-size: 30px;
 }

@@ -46,3 +46,9 @@
 .icon-checkmark:before {
   content: "\ea10";
 }
+
+/*FOOTER*/
+.footer-sect {
+  text-align: center;
+  font-size: 14px;
+  }
