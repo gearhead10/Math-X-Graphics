@@ -56,14 +56,14 @@ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 font-size: 17px;
 line-height: 1.42857;
 color: #52706f;
-background-color: #ffffff;
+background: linear-gradient(90deg, #016302, #F7BF45);
   
 }
 .div-1{
-  background-color: #ffffff;
+  background-color: transparent;
 }
 .div-2{
-  background-color: #ffffff;
+  background-color: transparent;
   padding-bottom: 3%;
   padding: -3%;
 }
@@ -75,13 +75,13 @@ h1{
   font: bold 50px "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   margin-bottom: 12px;
-  background: linear-gradient(45deg,#ffffff,#ffffff);
+  background: linear-gradient(45deg,#000000,#000000);
   
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .h1-banner{
-background-color: #242D34;
+background: linear-gradient(30deg, #F7BF45, #016302);
 padding: 1%;
 
 }
@@ -281,7 +281,7 @@ margin-top: 20px;
 margin-bottom: 30px; 
 }
 .ourFeatures {
-  background: #242D34;
+  background: linear-gradient(90deg, #016302, #F7BF45);
   text-align: left;
   padding: 100px 0 0;
 }
@@ -539,3 +539,60 @@ button:hover::after, button:focus::after {
     opacity: 0;
   }
 }
+/* HEADER*/
+
+header {
+  position: relative;
+  background-color: rgb(0, 0, 0);
+  height: 90vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+header video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+  position: relative;
+  z-index: 2;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+/* Media Query for devices withi coarse pointers and no hover functionality */
+
+/* This will use a fallback image instead of a video for devices that commonly do not support the HTML5 video element */
+
+@media (pointer: coarse) and (hover: none) {
+  header {
+    background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+  }
+
+  header video {
+    display: none;
+  }
+}
+
+

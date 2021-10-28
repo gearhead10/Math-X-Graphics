@@ -34,25 +34,38 @@
     </script>
   <body class="index" id="to-top">
 
-  
-<div class="h1-banner">  
-<center><h1>Math X Graphics</h1></center></div> 
+    <header>
+
+      <!-- This div is  intentionally blank. It creates the transparent black overlay over the video which you can modify in the CSS -->
+      <div class="overlay"></div>
+    
+      <!-- The HTML5 video element that will create the background video on the header -->
+      <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+        <source src="images/demo_1.mp4" type="video/mp4">
+      </video>
+    
+      <!-- The header content -->
+      <div class="container h-100">                   
+        <center><h1>Math X Graphics</h1></center>       
+      </div>
+    
     <!-- mainBanner -->
-    <header class="mainBanner" role="banner">
+    
 
       <div class="container">
 
         <div >
 
-          <div class="div-2"><!--DIV DEL LOGO + BOTÓN-->
+          <div><!--DIV DEL LOGO + BOTÓN-->
 
                <center><img class="logo" src="images/forma.png" id="logo" alt="logo"></center>           
                        
-             </div>	          
+             </div>                      
+             <center>
                			<div class="boton_1" id="boton_1">
                   <a href="app.html"
                    target="_parent"><button class="button">PROBAR</button></a>             
-                 </div>       
+                 </div></center>       
                  
           </div> 
           
@@ -60,11 +73,11 @@
           
          
         
-      </div> <!-- /.container -->
+       <!-- /.container -->
 
     </header> <!-- /.mainBanner -->
 
-    <hr>
+    
 
     <!-- Services -->
     <section class="highlights" id="section-1">
