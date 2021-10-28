@@ -9,6 +9,7 @@
   <link type="text/css" rel="stylesheet" href="./css/main.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.css">
+
   <title>Math X Graphics App</title>
 </head>
 
@@ -21,12 +22,11 @@
   <script>
     window.onload = function () {
       var contenedor = document.getElementById('contenedor_carga');
-
       contenedor.style.visibility = 'hidden';
       contenedor.style.opacity = '0';
     }
-
   </script>
+
 
   <div class="receptor">
     <div id="float"></div>
@@ -56,7 +56,7 @@
                     <label>Número de conjuntos</label>
                   </div>
                   <div class="">
-                    
+
                     <div class="input-field">
                       <input id="expression" type="text" required><label for="expression">Ingresa la operación</label>
                     </div>
@@ -66,21 +66,32 @@
                           <span>Conjuntos</span></label></p>
                       <div class="down" id="elements"></div>
                     </div>
-                    
+
                     <div class="input-field col s12">
                       <button class="button" onclick="eval()" type="button">
                         Iniciar<span class="icon-arrow-right"></span>
                       </button>
+                      <div class="tooltip"><span class="icon-info"></span>
+                        <span class="tooltiptext">
+                            <h5>U -> Unión</h5>
+                     
+                            <h5>^ -> Intersection</h5>
+                            <h5>- -> diferencia</h5>
+                            <h5>' -> Complemento</h5>
+                            <h5># -> Diferencia Simetrica</h5>
+                          
+                        </span>
+                      </div>
                     </div>
                   </div>
                   <div class="col s12">
                     <div class="row">
                       <div class="col s12 center-align" id="elements-result"></div>
                     </div>
-                  <div class="row mylog">
-                    <div class="col s12" id="logo">
-                      <p><img src="./images/forma.png" alt="Diagrama"></p>
-                    </div>
+                    <div class="row mylog">
+                      <div class="col s12" id="logo">
+                        <p><img src="./images/forma.png" alt="Diagrama"></p>
+                      </div>
                     </div>
                     <div class="col s12" id="diagram"><svg class="svg-effects">
                         <defs>
@@ -107,11 +118,12 @@
                       </svg>
                       <div class="hide center" id="sets2"><svg viewBox="0 0 303 303" xmlns="http://www.w3.org/2000/svg">
                           <style>
-                            #sets2 > svg{
+                            #sets2>svg {
                               border-radius: 20%;
                               border: 4px solid #000;
-                              background:#000;
+                              background: #000;
                             }
+
                             .dg {
                               fill: #ffe2e4;
                               stroke: #1d1e22;
@@ -140,11 +152,12 @@
                         </svg></div>
                       <div class="hide center" id="sets3"><svg viewBox="0 0 303 303" xmlns="http://www.w3.org/2000/svg">
                           <style>
-                            #sets3 > svg{
+                            #sets3>svg {
                               border-radius: 20%;
                               border: 4px solid #000;
-                              background:#000;
+                              background: #000;
                             }
+
                             .dg {
                               fill: #ffe2e4;
                               stroke: #1d1e22;
@@ -187,11 +200,12 @@
                       <div class="hide center" id="sets4">
                         <svg viewBox="0 0 303 303" xmlns="http://www.w3.org/2000/svg">
                           <style>
-                            #sets4 > svg{
+                            #sets4>svg {
                               border-radius: 20%;
                               border: 4px solid #000;
-                              background:#000;
+                              background: #000;
                             }
+
                             .dg {
                               fill: #ffe2e4;
                               stroke: #1d1e22;
@@ -367,11 +381,12 @@
                       </div>
                       <div class="hide center" id="sets5"><svg viewBox="0 0 303 303" xmlns="http://www.w3.org/2000/svg">
                           <style>
-                            #sets5 > svg{
+                            #sets5>svg {
                               border-radius: 20%;
                               border: 4px solid #000;
-                              background:#000;
+                              background: #000;
                             }
+
                             .dg {
                               fill: #ffe2e4;
                               stroke: #1d1e22;
@@ -472,7 +487,7 @@
                           <text transform="translate(20,60)">E</text><text transform="translate(40,25)">U</text>
                         </svg></div>
                     </div>
-                    
+
                   </div>
 
                 </div>
@@ -483,29 +498,44 @@
             <div class="tooltip1">
               <ul>
                 <span class="icon-info"></span> Información
-                <li><h5>U = Unión</h5></li>
-                <li><h5>^ = Intersection</h5></li>
-                <li><h5>- = diferencia</h5></li>
-                <li><h5>' = Complemento</h5></li>
-                <li><h5># = Diferencia Simetrica</h5></li>
+                <li>
+                  <h5>U -> Unión</h5>
+                </li>
+                <li>
+                  <h5>^ -> Intersection</h5>
+                </li>
+                <li>
+                  <h5>- -> diferencia</h5>
+                </li>
+                <li>
+                  <h5>' -> Complemento</h5>
+                </li>
+                <li>
+                  <h5># -> Diferencia Simetrica</h5>
+                </li>
               </ul>
             </div>
-            <footer>
-              <p>
-                <small class="block">&copy; 2021 :: Juan Jaraba - Daniel González - Fernando Fernández - Andrés Angulo -
-                  Valentina Picón :: All Rights Reserved.</small>
-
-              </p>
-              <p>
-                <small class="block">PCA 2021
-                </small>
-              </p>
-
-
-            </footer>
-            </main>
-            <section>
   </header>
+
+  <!--FOOTER-->
+
+  <footer class="footer-sect">
+    <div>
+      <div>
+        <div>
+          <p>2021 - All rights reserved. <a href="https://github.com/gearhead10" target="_blank">Dev</a> by AWR COL</p>
+          <p>Daniel González - Juan Jaraba - Andrés Angulo - Fernando Fernández - Valentina Picón</p>
+          <p>PCA 2021</p>
+          <br>
+          <img src="images/logo-retina.png" width="50">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  </main>
+  <section>
+
 
 </body>
 <script type="text/javascript" src="./js/jquery-3.4.1.min.js"></script>
@@ -513,7 +543,6 @@
 <script type="text/javascript" src="./js/init.js"></script>
 <script type="text/javascript" src="./js/graphing.js"></script>
 <script type="text/javascript" src="./js/elements.js"></script>
-<script type="text/javascript" src="./js/vdg.js">
-</script>
+<script type="text/javascript" src="./js/vdg.js"></script>
 
 </html>
