@@ -7559,9 +7559,11 @@ footer {
     padding: 50px;
     height: 100%;
     width: 100%;
-    
     position: relative;
     color: rgb(255, 255, 255) !important;
+}
+footer p{
+    color:white!important;
 }
 
 .row .mylog {
