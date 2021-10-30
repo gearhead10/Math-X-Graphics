@@ -127,18 +127,18 @@ let eval = () => {
       sets = evalElements(n);
 
       if (sets.length == 0) return;
-
-       
-       sets[3] = valuesUniverso;
-       var data = `${x} = {`;
-       for (var i = 0; i < e.length; ++i) {
-         if (e[i])
-        if(sets[i] == '' || sets[i+1] == undefined){
-          data += ''
-        }else{
-          data += `${sets[i]},`
-        }
-          // data += sets[i] == ''? '' : `${sets[i]}, `;
+      n === 2 ? sets[3] : '';
+      n === 4 ? sets[15] : '';
+      n === 5 ? sets[31] : '';
+      var data = `${x} = {`;
+      for (var i = 0; i < e.length; ++i) {
+        if (e[i])
+          if (sets[i] == '' || sets[i + 1] == undefined) {
+            data += ''
+          } else {
+            data += `${sets[i]},`
+          }
+        // data += sets[i] == ''? '' : `${sets[i]}, `;
       }
       data += `}`
       if (e[e.length - 1]) data += '<br>Recuerda definir el conjunto universo.';
