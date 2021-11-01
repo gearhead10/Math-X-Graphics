@@ -170,6 +170,8 @@ let evalElements = n => {
 
   } else {
     var uniSet = document.getElementById('univ').value;
+    var words3 = uniSet.split(/\s*,+\s*/);
+
     for (var i = 0; i < n; ++i) {
       var letter = String.fromCharCode(65 + i);
       var stmp = $(`#sett${letter}`).val();
@@ -181,11 +183,12 @@ let evalElements = n => {
       if(stmp = '' || stmp == undefined || words.length == 0 || uniSet == ''){
         document.getElementById('elements-result').innerHTML = "Hey hey no ingresaste valores"
       }else{
-
         sets.push(words);
       }
-  
+      
     }
+    sets.push(words3);
+    console.log(sets)
   }
   if (count == n) return [];
   console.log(buildPieces(sets, n))

@@ -90,7 +90,6 @@ let eval = () => {
   var x = D.getId("expression").value;
   var Univ = D.getId("univ").value;
   var valuesUniverso = Univ.split(",");
-
   x = prepros(x);
   var n = userSets();
   if (x) {
@@ -98,7 +97,6 @@ let eval = () => {
 
     var p = toPost(x);
     var e = evaluate(p, n);
-    console.log(e)
     for (var i = 2; i < 6; ++i) {
       var tmp = `sets${i}`;
       if (i === n) {
@@ -127,9 +125,9 @@ let eval = () => {
       sets = evalElements(n);
 
       if (sets.length == 0) return;
-      n === 2 ? sets[3] : '';
-      n === 4 ? sets[15] : '';
-      n === 5 ? sets[31] : '';
+      n === 2 ? sets[3] = valuesUniverso : '';
+      n === 4 ? sets[15] = valuesUniverso : '';
+      n === 5 ? sets[31] = valuesUniverso : '';
       var data = `${x} = {`;
       for (var i = 0; i < e.length; ++i) {
         if (e[i])
@@ -182,6 +180,7 @@ let floatClick = function (e) {
   var n = this.id.charAt(1);
   var data = '<div style="margin-left:30px;" class = "row"><div class="col s12">';
   data += `<h1 style="color:black;">${nameSets[n - 2][section - 1]}</h1><p>`;
+  console.log(sets[section - 1])
   data += `${(sets[section - 1] == undefined || sets[section - 1] == '' || sets[section - 1].length == 0) ? 'Sin elementos' : sets[section - 1]}`;
   data += '</p></div></div>';
 
