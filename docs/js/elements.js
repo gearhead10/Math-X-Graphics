@@ -145,7 +145,7 @@ let buildPieces = (sets, n) => {
 
   return r;
 }
-let evalElements = n => {
+let evalElements = (n, state) => {
 
   let sets = [];
   let count = 0;
@@ -169,8 +169,11 @@ let evalElements = n => {
     sets.push(words2) 
 
   } else {
-    var uniSet = document.getElementById('univ').value;
-    var words3 = uniSet.split(/\s*,+\s*/);
+    if(state === 'normal'){
+
+      var uniSet = document.getElementById('univ').value;
+      var words3 = uniSet.split(/\s*,+\s*/);
+    }
 
     for (var i = 0; i < n; ++i) {
       var letter = String.fromCharCode(65 + i);
@@ -187,7 +190,7 @@ let evalElements = n => {
       }
       
     }
-    sets.push(words3);
+    state == "normal"? sets.push(words3): "";
     console.log(sets)
   }
   if (count == n) return [];

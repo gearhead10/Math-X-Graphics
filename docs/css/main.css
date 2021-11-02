@@ -218,7 +218,7 @@ main .elements p {
     color: #ffffff !important;
   }
 
-button::before {
+.button::before {
 content: '';
   border-radius: 1000px;
   min-width: calc(140px + 12px);
@@ -236,6 +236,20 @@ content: '';
 .button:hover, .button:focus {
   color: #ffffff;
   transform: translateY(-6px);
+}
+
+.btn-comp{
+  border:0;
+  color: #ffffff;
+  transition: all .3s ease-in-out;
+  background-color: #056403;
+  border-radius: 1000px;
+  min-width: 130px;
+  min-height: 35px;
+}
+.btn-comp:hover{
+  background-color: #089b06;
+  transition: 0.3s;
 }
 
 button:hover::before, button:focus::before {
