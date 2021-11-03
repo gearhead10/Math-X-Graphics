@@ -1,4 +1,3 @@
-var state = "normal"
 //Aqui se está retornando el número de conjuntos que se seleccionaron
 let userSets = () => {
   var s = D.getId('n-sets');
@@ -6,22 +5,11 @@ let userSets = () => {
   return n === 'auto' ? 0 : Number.parseInt(n);
 }
 
-let initComplemento = () => {
-  var inputComp = D.getId('settLabelB')
-  var univertemp = D.getId('univ')
-  inputComp.innerHTML = 'Conjunto U'
-  $(univertemp).remove();
-  state = "complemento"
-}
 
 //Esta función se llama en el fron al momento de seleccional el número de conjuntos
 //Lo que hace es contruir los campos(input) donde se ingresarán los valores de cada conjunto
 let buildElements = () => {
-  state = "normal"
-  console.log(state)
   var n = userSets();
-  var complementBtn = D.getId('btn-complemento')
-  n == 2 ? complementBtn.removeAttribute('hidden') : complementBtn.setAttribute('hidden', '')
 
   var row = D.create('div');
   row.className = 'row';
@@ -101,11 +89,11 @@ let currentDigram = '';
 //Está función se llama al momento de dar click en el generar conjunto
 let eval = () => {
   var x = D.getId("expression").value;
-  if (state == 'normal') {
 
-    var Univ = D.getId("univ").value;
-    var valuesUniverso = Univ.split(",");
-  }
+
+  var Univ = D.getId("univ").value;
+  var valuesUniverso = Univ.split(",");
+
   x = prepros(x);
   var n = userSets();
   if (x) {
@@ -113,36 +101,33 @@ let eval = () => {
 
     var p = toPost(x);
     var e = evaluate(p, n);
-    if (state == 'normal') {
 
-
-      for (var i = 2; i < 6; ++i) {
-        var tmp = `sets${i}`;
-        if (i === n) {
-          D.getId(tmp).classList.remove('hide');
-          currentDigram = tmp;
-        }
-        else {
-          D.getId(tmp).classList.add('hide');
-        }
+    for (var i = 2; i < 6; ++i) {
+      var tmp = `sets${i}`;
+      if (i === n) {
+        D.getId(tmp).classList.remove('hide');
+        currentDigram = tmp;
       }
-
-      for (var i = 0; i < e.length; ++i) {
-        var tmp = `f${n}_${i + 1}`;
-
-        if (e[i])
-          D.getId(tmp).classList.add('p');
-
-        else
-          D.getId(tmp).classList.remove('p');
-
+      else {
+        D.getId(tmp).classList.add('hide');
       }
     }
+
+    for (var i = 0; i < e.length; ++i) {
+      var tmp = `f${n}_${i + 1}`;
+
+      if (e[i])
+        D.getId(tmp).classList.add('p');
+
+      else
+        D.getId(tmp).classList.remove('p');
+
+    }
+
     var val = D.getId("useEl").checked;
 
     if (val) {
-      sets = evalElements(n, state);
-
+      sets = evalElements(n);
       if (sets.length == 0) return;
       n === 2 ? sets[3] = valuesUniverso : '';
       n === 3 ? sets[6] = valuesUniverso : '';
@@ -153,13 +138,11 @@ let eval = () => {
         if (e[i])
           if (sets[i] == '' || sets[i + 1] == undefined) {
             data += ''
+
           } else {
-            if(sets[i + 1] == undefined || sets[i + 1] == ''){
-              data += `${sets[i]}`
-            }else{
-              data += `${sets[i]},`
-            }
+            data += `${sets[i]},`
           }
+
         // data += sets[i] == ''? '' : `${sets[i]}, `;
       }
       data += `}`
@@ -167,7 +150,7 @@ let eval = () => {
       D.getId('elements-result').innerHTML = data;
     }
   } else {
-    D.getId('elements-result').innerHTML = 'Error';
+    D.getId('elements-result').innerHTML = ' <span class="icon-warning"></span> Recuerda ingresar la operación';
   }
 
 }

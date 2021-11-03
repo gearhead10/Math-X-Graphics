@@ -47,7 +47,6 @@
 
                   <div class="input-field col s12"><select id="n-sets" onchange="buildElements()">
                       <option value="auto" selected>Selecciona un valor</option>
-                      <option value="1">1 Conjunto</option>
                       <option value="2">2 Conjuntos</option>
                       <option value="3">3 Conjuntos</option>
                       <option value="4">4 Conjuntos</option>
@@ -56,8 +55,6 @@
                     <label>Número de conjuntos</label>
                   </div>
                   <div>
-
-
                     <div class="input-field">
                       <input id="expression" type="text" required><label for="expression">Ingresa la operación</label>
                     </div>
@@ -69,23 +66,17 @@
 
                   </div>
                   <div class="input-field col s12 elements">
-                    <div id='btn-complemento' class="input-field col s12" hidden>
-                      <button class="btn-comp" onclick="initComplemento()" type="button">
-                        Complemento
-                      </button>
-                    </div>
+                    
                     <div class="input-field col s12">
                       <button class="button" onclick="eval()" type="button">
-                        Iniciar <span class="icon-arrow-right"></span>
+                        Iniciar <span class="icon-pencil2"></span>
                       </button>
                       <div class="tooltip"><span class="icon-info"></span>
                         <span class="tooltiptext">
-                          <h5>U -> Unión</h5>
-
-                          <h5>^ -> Intersection</h5>
-                          <h5>- -> diferencia</h5>
-                          <h5>' -> Complemento</h5>
-                          <h5># -> Diferencia Simetrica</h5>
+                          <h5>U  <span class="icon-arrow-right"></span>  Unión</h5>
+                          <h5>^  <span class="icon-arrow-right"></span>  Intersección</h5>
+                          <h5>-  <span class="icon-arrow-right"></span>  Diferencia</h5>
+                          <h5>#  <span class="icon-arrow-right"></span>  Diferencia simétrica</h5>
 
                         </span>
                       </div>
@@ -431,19 +422,16 @@
               <ul>
                 <span class="icon-info"></span> Información
                 <li>
-                  <h5>U -> Unión</h5>
+                  <h5>U <span class="icon-arrow-right"></span> Unión</h5>
                 </li>
                 <li>
-                  <h5>^ -> Intersection</h5>
+                  <h5>^ <span class="icon-arrow-right"></span> Intersección</h5>
                 </li>
                 <li>
-                  <h5>- -> diferencia</h5>
+                  <h5>- <span class="icon-arrow-right"></span> Diferencia</h5>
                 </li>
                 <li>
-                  <h5>' -> Complemento</h5>
-                </li>
-                <li>
-                  <h5># -> Diferencia Simetrica</h5>
+                  <h5># <span class="icon-arrow-right"></span> Diferencia simétrica</h5>
                 </li>
               </ul>
             </div>

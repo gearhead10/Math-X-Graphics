@@ -145,7 +145,7 @@ let buildPieces = (sets, n) => {
 
   return r;
 }
-let evalElements = (n, state) => {
+let evalElements = (n) => {
 
   let sets = [];
   let count = 0;
@@ -158,22 +158,20 @@ let evalElements = (n, state) => {
     var words2 = stmp2.split(/\s*,+\s*/);
     words2 = words2.filter(e => e !== '');
 
-    if(stmp = '' || stmp == undefined || words.length == 0){
-      document.getElementById('elements-result').innerHTML = "Hey hey no ingresaste valores"
+    if (stmp = '' || stmp == undefined || words.length == 0) {
+      document.getElementById('elements-result').innerHTML =   `<span class="icon-warning"></span> No olvides ingresar valores en los conjuntos`
     }
 
     console.log(words)
     console.log(words2)
-    
+
     sets.concat(words)
-    sets.push(words2) 
+    sets.push(words2)
 
   } else {
-    if(state === 'normal'){
+    var uniSet = document.getElementById('univ').value;
+    var words3 = uniSet.split(/\s*,+\s*/);
 
-      var uniSet = document.getElementById('univ').value;
-      var words3 = uniSet.split(/\s*,+\s*/);
-    }
 
     for (var i = 0; i < n; ++i) {
       var letter = String.fromCharCode(65 + i);
@@ -183,14 +181,14 @@ let evalElements = (n, state) => {
       console.log(words)
       if (words.length === 0) count++;
 
-      if(stmp = '' || stmp == undefined || words.length == 0 || uniSet == ''){
-        document.getElementById('elements-result').innerHTML = "Hey hey no ingresaste valores"
-      }else{
+      if (stmp = '' || stmp == undefined || words.length == 0 || uniSet == '') {
+        document.getElementById('elements-result').innerHTML = `<span class="icon-warning"></span> No olvides ingresar valores en los conjuntos `
+      } else {
         sets.push(words);
       }
-      
+
     }
-    state == "normal"? sets.push(words3): "";
+    sets.push(words3);
     console.log(sets)
   }
   if (count == n) return [];
