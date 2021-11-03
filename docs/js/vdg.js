@@ -130,7 +130,7 @@ let eval = () => {
       sets = evalElements(n);
       if (sets.length == 0) return;
       n === 2 ? sets[3] = valuesUniverso : '';
-      n === 3 ? sets[6] = valuesUniverso : '';
+      n === 3 ? sets[7] = valuesUniverso : '';
       n === 4 ? sets[15] = valuesUniverso : '';
       n === 5 ? sets[31] = valuesUniverso : '';
       var data = `${x} = {`;
@@ -186,7 +186,6 @@ let floatClick = function (e) {
   var n = this.id.charAt(1);
   var data = '<div style="margin-left:30px;" class = "row"><div class="col s12">';
   data += `<h1 style="color:black;">${nameSets[n - 2][section - 1]}</h1><p>`;
-  console.log(sets[section - 1])
   data += `${(sets[section - 1] == undefined || sets[section - 1] == '' || sets[section - 1].length == 0) ? 'Sin elementos' : sets[section - 1]}`;
   data += '</p></div></div>';
 
