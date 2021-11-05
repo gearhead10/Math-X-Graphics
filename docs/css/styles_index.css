@@ -1,0 +1,598 @@
+
+*,*:after, *before{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+} 
+
+#contenedor_carga{
+  background-color: rgba(255, 255, 255, 0.9);
+  height: 100%;
+  width: 100;
+  position: center;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+  z-index: 10000;
+}
+#carga{
+  border: 15px solid #ccc;
+  border-top-color: #F4266A;
+  border-top-style: groove;
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  -webkit-animation: girar 3.5s linear infinite;
+  -o-animation: girar 3.5s linear infinite;
+  animation: girar 1.5s linear infinite;
+}
+
+@keyframes girar{
+  from{ transform: rotate(0deg); }
+  to {transform: rotate(360deg); }
+}
+
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+body {
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 17px;
+line-height: 1.42857;
+color: #52706f;
+background: linear-gradient(90deg, #016302, #F7BF45);
+  
+}
+.div-1{
+  background-color: transparent;
+}
+.div-2{
+  background-color: transparent;
+  padding-bottom: 3%;
+  padding: -3%;
+}
+#boton_1{
+  padding: 3.5%;
+}
+h1{
+  font-size: 50px;
+  font: bold 50px "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  background: linear-gradient(45deg,#000000,#000000);
+  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.h1-banner{
+background: linear-gradient(30deg, #F7BF45, #016302);
+padding: 1%;
+
+}
+h4{
+color: #1B1B1B;
+font: bold 18px/24px "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+text-transform: uppercase;
+margin-bottom: 12px;
+}
+h2{
+color: #373737;
+margin-bottom:30px;
+}
+h3{
+font-size: 20px;
+color: #696969;
+}
+a.button {
+text-decoration: none;
+float: left;
+line-height: 54px;
+color: white;
+}
+.btn-prime{
+color: white;
+background: #0379CD;
+}
+.btn-prime:hover {
+color:#fff;
+background:#007BD3;
+border-color: #007BD3;
+}
+.button {
+color: white;
+background: #03c6cd;
+height: 58px;
+border: 2px solid #03cdbc;
+font: 500 22px "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+padding: 0 21px;
+-moz-transition: color 0.1s linear, background-color 0.1s linear, border-color 0.1s linear;
+-ms-transition: color 0.1s linear, background-color 0.1s linear, border-color 0.1s linear;
+-o-transition: color 0.1s linear, background-color 0.1s linear, border-color 0.1s linear;
+-webkit-transition: color 0.1s linear, background-color 0.1s linear, border-color 0.1s linear;
+transition: color 0.1s linear, background-color 0.1s linear, border-color 0.1s linear;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+}
+a.button.button-stripe {
+background-color: transparent;
+border-color: white;
+}
+a.button.button-stripe:hover {
+color: #222222;
+background-color: white;
+border-color: white;
+} 
+a.button.button-stripe {
+background-color:transparent;
+border-color: white;
+}
+a.button:hover {
+color: white;
+}
+.button:hover {
+background:#01f7ff;
+border-color: #1384D5;
+}
+.buttons-wrapper .button-stripe {
+margin-left: 14px;
+}
+header .buttons-wrapper {
+padding-top: 20px;
+}
+.side-nav {
+position: fixed;
+top: 45%;
+right: 20px;
+z-index: 1030;
+}
+.side-nav ul.nav-side-nav {
+text-align: center;
+list-style: none;
+margin: 0;
+padding-left: 0;
+}
+.side-nav ul.nav-side-nav > li {
+display: block;
+line-height: 1.42857;
+margin: 0;
+padding: 8px 0;
+}
+.side-nav ul.nav-side-nav > li > a {
+display: block;
+width: 10px;
+height: 10px; 
+background: #ffffff;
+border-radius: 78%;
+padding: 7px;
+border: 1px solid #5EB920;
+}
+.mainBanner {
+padding-top: 100px;
+padding-bottom: 100px;
+}
+.mainBanner {
+padding: 20px 0;
+margin-bottom: 0;
+color: rgb(255, 255, 255);
+background:#ffffff;
+background-size: cover;
+text-align: center;
+background:url() top center;
+background-size:cover;
+} 	
+#logo{
+  display: flex;
+  position: relative;
+  width: 30%;
+  margin-left:auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  
+}
+.mainBanner .img-logo {
+display:block;
+position: relative;
+width: auto;
+height: auto;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+.mainBanner h1, .mainBanner .h1 {
+font-size: 35px;
+text-align: center;
+color: #ffffff;
+text-transform: uppercase;
+}
+.mainBanner p {
+font: bold 34px "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+margin-bottom: 15px;
+font-size: 20px;
+font-weight: 200;
+text-align:center;
+color: #00ddfa;
+}
+.mainBanner  img.img-iPhone {
+position: relative;
+bottom: 0px;
+margin-bottom: 0px;
+}
+.mainBanner .btn-app-store {
+margin-top: 40px;
+}
+.mainBanner p {
+margin-bottom: 15px;
+font-size: 20px;
+font-weight: 200;
+}
+.mainBanner .btn-app-store .btn.btn-lg, .mainBanner .btn-app-store .btn-group-lg > .btn {
+padding: 0;
+}
+.mainBanner .img-iPhone {
+display: flex;
+margin-left: auto;
+margin-right: auto;
+width: 200px;
+height: auto;
+}
+.highlights {
+  background: white;
+  text-align: center;
+  padding: 100px 0;
+}
+.highlights .row.row-padding {
+  padding-top: 40px;
+}
+
+.highlightsCol {
+  padding-bottom: 20px;
+} 
+.highlightsImg.img-margin {
+margin-top: 14px;
+margin-bottom: 31px;
+}
+.highlightsImg {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 80px;
+height: auto;
+margin-top: 20px;
+margin-bottom: 30px; 
+}
+.ourFeatures {
+  background: linear-gradient(90deg, #016302, #F7BF45);
+  text-align: left;
+  padding: 100px 0 0;
+}
+.ourFeatures  h2, .ourFeatures h3, .ourFeatures p{
+color:#fff;
+}
+.ourFeatures p{
+color:#E2FFCF;
+}
+.ourFeatures .row.row-padding {
+  padding-top: 40px;
+}
+.ourFeatures .img-iPhone {
+position: relative;
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 100%;
+height: auto;
+}
+.ourFeatures .btn-prime-border {
+background: transparent;
+border-width: 2px;
+border-style: solid;
+border-color: #dc554f;
+color: #dc554f;
+padding-top: 8px !important;
+padding-bottom: 8px !important;
+}
+.featuresBtm{
+margin-top:150px;
+margin-bottom:0px;
+}
+.gif{
+width: 70%;
+max-width: 960px;
+margin: 0 auto;
+padding-bottom: 2%;
+}
+.gif .img{
+width: 100%;
+height: auto;
+}
+.subscribe {
+background: #1F1F1F;
+text-align: center;
+padding: 100px 0;
+background-size: cover;
+color: white;
+display:block;
+}
+.subscribe h2{
+color:#fff;
+}
+.subscribe input{
+padding: 20px 10px;
+width: 350px;
+}
+.subscribe button{
+color: white;
+background: #0379CD;
+margin: 0px;
+padding: 10px 20px;
+margin-left: -10px;
+}
+.subscribe-description { 
+padding: 40px 0;
+}
+.footer-section {
+background: white;
+text-align: left;
+padding: 60px 0;
+}
+.addthis_default_style {
+text-align: left;
+list-style: none;
+margin: 0;
+padding-left: 0;
+}
+.addthis_default_style li:first-child {
+margin-left: -2px;
+}
+.addthis_default_style li {
+display: inline-block;
+line-height: 1.42857;
+margin: 0;
+padding: 0;
+}
+.addthis_default_style a {
+display: block;
+}
+.social-icons {
+float:right;
+}
+.social-icons a{ 
+color: #00fce7;
+text-decoration: none;
+padding: 0px 0 0 15px;
+border: 1px solid #00fce7;
+border-radius: 50%;
+width: 45px;
+float: left;
+margin: 5px;
+height: 45px;
+line-height: 45px; 
+}
+.simple-content ul li {
+font-size: 18px;
+line-height: 32px;
+font-weight: 300;
+margin-bottom: 18px;
+list-style:none;
+}
+.simple-content ul li span {
+display: block;
+overflow: hidden;
+}
+
+@media (max-width: 1200px){
+.mainBanner .img-logo{
+display: block;
+margin-top:0px;
+margin-bottom: 1px;
+}
+.mainBanner .img-iPhone {
+width: 376px;
+}
+}
+@media (max-width: 768px){
+.mainBanner{
+height: 633px;
+}
+
+ .mainBanner .img-logo {
+display: block;
+width: auto;
+height: auto;
+margin: 0;
+}
+.mainBanner .img-iPhone { 
+width: 340px;
+}
+.highlights{
+padding-top:0;
+}
+}
+@media (max-width: 480px){
+.mainBanner{
+height: 633px;
+}
+.mainBanner .img-logo{
+margin: 0px;
+padding: 0px;
+}
+.mainBanner h1, .mainBanner .h1 {
+font-size: 26px;
+text-align: left;
+color: #E9FAFF;
+text-transform: uppercase; 
+display: inline-block;
+} 
+.highlights { 
+margin-top: -80px !important;
+}
+.mainBanner img.img-iPhone {
+position: fixed;
+bottom: -20px;
+display: none;
+}
+}
+/*!
+ PRUEBA DE BOTÓN EN CSS CON WRAP RING!*/
+ 
+.wrap {
+  padding: 30px;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.button {
+  min-width: 150px;
+  min-height: 60px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #000000;
+  background: #ffffff;
+  background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rrgb(255, 255, 255)100%);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgba(129, 240, 229, 0.64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+  }
+
+button::before {
+content: '';
+  border-radius: 100px;
+  min-width: calc(150px + 12px);
+  min-height: calc(60px + 12px);
+  border: 6px solid #00fff2;
+  box-shadow: 0 0 60px rgba(243, 243, 243, 0.64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+}
+
+.button:hover, .button:focus {
+  color: #313133;
+  transform: translateY(-6px);
+}
+
+button:hover::before, button:focus::before {
+  opacity: 1;
+}
+
+button::after {
+  content: '';
+  width: 30px; height: 30px;
+  border-radius: 100%;
+  border: 6px solid #00fff2;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 2s infinite;
+}
+
+button:hover::after, button:focus::after {
+  animation: none;
+  display: none;
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+  }
+}
+/* HEADER*/
+
+header {
+  position: relative;
+  background-color: rgb(0, 0, 0);
+  height: 90vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+header video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+  position: relative;
+  z-index: 2;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+/* Media Query for devices withi coarse pointers and no hover functionality */
+
+/* This will use a fallback image instead of a video for devices that commonly do not support the HTML5 video element */
+
+@media (pointer: coarse) and (hover: none) {
+  header {
+    background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+  }
+
+  header video {
+    display: none;
+  }
+}
+
+
