@@ -150,47 +150,25 @@ let evalElements = (n) => {
   let sets = [];
   let count = 0;
 
-  if (n === 1) {
-    var stmp = $(`#settA`).val();
+  var uniSet = document.getElementById('univ').value;
+
+
+  for (var i = 0; i < n; ++i) {
+    var letter = String.fromCharCode(65 + i);
+    var stmp = $(`#sett${letter}`).val();
     var words = stmp.split(/\s*,+\s*/);
     words = words.filter(e => e !== '');
-    var stmp2 = document.getElementById('univ').value;
-    var words2 = stmp2.split(/\s*,+\s*/);
-    words2 = words2.filter(e => e !== '');
-
-    if (stmp = '' || stmp == undefined || words.length == 0) {
-      document.getElementById('elements-result').innerHTML =   `<span class="icon-warning"></span> No olvides ingresar valores en los conjuntos`
-    }
-
     console.log(words)
-    console.log(words2)
+    if (words.length === 0) count++;
 
-    sets.concat(words)
-    sets.push(words2)
-
-  } else {
-    var uniSet = document.getElementById('univ').value;
-    var words3 = uniSet.split(/\s*,+\s*/);
-
-
-    for (var i = 0; i < n; ++i) {
-      var letter = String.fromCharCode(65 + i);
-      var stmp = $(`#sett${letter}`).val();
-      var words = stmp.split(/\s*,+\s*/);
-      words = words.filter(e => e !== '');
-      console.log(words)
-      if (words.length === 0) count++;
-
-      if (stmp = '' || stmp == undefined || words.length == 0 || uniSet == '') {
-        document.getElementById('elements-result').innerHTML = `<span class="icon-warning"></span> No olvides ingresar valores en los conjuntos `
-      } else {
-        sets.push(words);
-      }
-
+    if (stmp = '' || stmp == undefined || words.length == 0 || uniSet == '') {
+      document.getElementById('elements-result').innerHTML = `<span class="icon-warning"></span> No olvides ingresar valores en los conjuntos `
+    } else {
+      sets.push(words);
     }
-    sets.push(words3);
-    console.log(sets)
+
   }
+
   if (count == n) return [];
   console.log(buildPieces(sets, n))
   return buildPieces(sets, n);

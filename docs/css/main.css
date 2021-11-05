@@ -266,7 +266,7 @@ button:hover::after, button:focus::after {
     min-width: 120px;
     min-height: 20px;
   }
-  button::before{
+  .button::before{
     min-width: calc(120px + 12px);
     min-height: calc(20px + 12px);  
   }
@@ -462,8 +462,20 @@ button.eval i {
 
 #elements-result {
   font-size: 1 em;
+  width: 500px;
 }
-
+@media screen and (max-width: 500px) {
+  #elements-result {
+    font-size: 1 em;
+    width: 200px;
+  } 
+}
+@media screen and (max-width: 760px) {
+  #elements-result {
+    font-size: 1 em;
+    width: 200px;
+  } 
+}
 #canvas {
   display: none;
 }

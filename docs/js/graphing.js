@@ -127,7 +127,6 @@ let intersection = (a, b) => a & b;
 
 
 let substraction = (a, b) => a ^ b & a;
-let complement = (a, u) => substraction(u, a);
 
 
 let diferencia = (a, b) => substraction(a,b) | substraction(b,a);

@@ -7657,4 +7657,8 @@ footer p {
         padding-top: 10px;
         margin-left: -60px;
     }
+    #elements-result {
+        font-size: 1 em;
+        width: 100px;
+      }
 }

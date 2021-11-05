@@ -90,67 +90,70 @@ let currentDigram = '';
 let eval = () => {
   var x = D.getId("expression").value;
 
+  try {
+    var Univ = D.getId("univ").value;
+    var valuesUniverso = Univ.split(",");
 
-  var Univ = D.getId("univ").value;
-  var valuesUniverso = Univ.split(",");
+    x = prepros(x);
+    var n = userSets();
+    if (x) {
+      D.getId('logo').classList.add('hide');
 
-  x = prepros(x);
-  var n = userSets();
-  if (x) {
-    D.getId('logo').classList.add('hide');
+      var p = toPost(x);
+      var e = evaluate(p, n);
 
-    var p = toPost(x);
-    var e = evaluate(p, n);
-
-    for (var i = 2; i < 6; ++i) {
-      var tmp = `sets${i}`;
-      if (i === n) {
-        D.getId(tmp).classList.remove('hide');
-        currentDigram = tmp;
+      for (var i = 2; i < 6; ++i) {
+        var tmp = `sets${i}`;
+        if (i === n) {
+          D.getId(tmp).classList.remove('hide');
+          currentDigram = tmp;
+        }
+        else {
+          D.getId(tmp).classList.add('hide');
+        }
       }
-      else {
-        D.getId(tmp).classList.add('hide');
-      }
-    }
 
-    for (var i = 0; i < e.length; ++i) {
-      var tmp = `f${n}_${i + 1}`;
-
-      if (e[i])
-        D.getId(tmp).classList.add('p');
-
-      else
-        D.getId(tmp).classList.remove('p');
-
-    }
-
-    var val = D.getId("useEl").checked;
-
-    if (val) {
-      sets = evalElements(n);
-      if (sets.length == 0) return;
-      n === 2 ? sets[3] = valuesUniverso : '';
-      n === 3 ? sets[7] = valuesUniverso : '';
-      n === 4 ? sets[15] = valuesUniverso : '';
-      n === 5 ? sets[31] = valuesUniverso : '';
-      var data = `${x} = {`;
       for (var i = 0; i < e.length; ++i) {
+        var tmp = `f${n}_${i + 1}`;
+
         if (e[i])
-          if (sets[i] == '' || sets[i + 1] == undefined) {
-            data += ''
+          D.getId(tmp).classList.add('p');
 
-          } else {
-            data += `${sets[i]},`
-          }
+        else
+          D.getId(tmp).classList.remove('p');
 
-        // data += sets[i] == ''? '' : `${sets[i]}, `;
       }
-      data += `}`
 
-      D.getId('elements-result').innerHTML = data;
+      var val = D.getId("useEl").checked;
+
+      if (val) {
+        sets = evalElements(n);
+        console.log(sets);
+        if (sets.length == 0) return;
+        n === 2 ? sets[3] = valuesUniverso : '';
+        n === 3 ? sets[7] = valuesUniverso : '';
+        n === 4 ? sets[15] = valuesUniverso : '';
+        n === 5 ? sets[31] = valuesUniverso : '';
+        var data = `${x} = {`;
+        for (var i = 0; i < e.length; ++i) {
+          if (e[i])
+            if (sets[i] == '' || sets[i + 1] == undefined) {
+              data += ''
+
+            } else {
+              data += `${sets[i]},`
+            }
+        }
+        data += `}`
+
+        D.getId('elements-result').innerHTML = data;
+
+      }
+    } else {
+      D.getId('elements-result').innerHTML = '<span class="icon-warning"></span> Recuerda ingresar la operación';
     }
-  } else {
-    D.getId('elements-result').innerHTML = ' <span class="icon-warning"></span> Recuerda ingresar la operación';
+  } catch (error) {
+    D.getId('elements-result').innerHTML = '<span class="icon-warning"></span> Recuerda seleccionar el número de conjuntos';
   }
 
 }
@@ -179,7 +182,6 @@ let floatClick = function (e) {
     float.classList.toggle('show');
   else
     float.classList.add('show');
-
   var content = D.create('div');
   content.className = 'float-content';
   var section = this.id.split(/_/)[1];
