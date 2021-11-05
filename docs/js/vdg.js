@@ -17,6 +17,7 @@ let buildElements = () => {
   var uni = D.create('input');
   uni.setAttribute('id', 'univ');
   uni.setAttribute('type', 'text');
+  uni.setAttribute('maxlength', '17');
 
 
   var Unilabel = D.create('label');
@@ -33,7 +34,8 @@ let buildElements = () => {
     var input = D.create('input');
     input.setAttribute('id', `sett${letter}`);
     input.setAttribute('type', 'text');
-
+    input.setAttribute('maxlength', '17');
+    
     var label = D.create('label');
     label.setAttribute('id', `settLabel${letter}`);
     label.setAttribute('for', `sett${letter}`);
