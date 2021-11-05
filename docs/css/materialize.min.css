@@ -7637,6 +7637,17 @@ footer p {
     box-shadow: 15px 15px 20px 10px rgba(0, 0, 0, 0.377);
 }
 
+.tooltip1 a{
+    color: #3F7B74 !important;
+    transition: 0.5s all;
+}
+.tooltip1 a:hover{
+    color: #00695c !important;
+    margin-left: 3px;
+    transition: 0.5s all;
+}
+
+
 @media screen and (max-width: 1400px) {
     .tooltip1 {
         display: none;
