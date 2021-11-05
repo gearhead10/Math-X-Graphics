@@ -17,7 +17,7 @@ let buildElements = () => {
   var uni = D.create('input');
   uni.setAttribute('id', 'univ');
   uni.setAttribute('type', 'text');
-  uni.setAttribute('maxlength', '17');
+  
 
 
   var Unilabel = D.create('label');
