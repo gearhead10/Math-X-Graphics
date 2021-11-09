@@ -376,18 +376,7 @@ display: block;
 .social-icons {
 float:right;
 }
-.social-icons a{ 
-color: #00fce7;
-text-decoration: none;
-padding: 0px 0 0 15px;
-border: 1px solid #00fce7;
-border-radius: 50%;
-width: 45px;
-float: left;
-margin: 5px;
-height: 45px;
-line-height: 45px; 
-}
+
 .simple-content ul li {
 font-size: 18px;
 line-height: 32px;
